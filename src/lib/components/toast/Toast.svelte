@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Icon, Toast } from '@daks.dev/svelte.pack';
+  import { Icon, Toast } from '@daks.dev/svelte.sdk';
 
   export let ontouch = !$$slots.default;
 </script>
@@ -10,7 +10,7 @@
   {...$$restProps}>
   <slot {touch}>
     <Icon
-      class="w-7 h-7 -ml-1"
+      class="-ml-1 h-7 w-7"
       icon="ic:round-touch-app" />
     <div>
       на устройствах с сенсорным вводом для навигации по ссылкам верхнего меню доступно

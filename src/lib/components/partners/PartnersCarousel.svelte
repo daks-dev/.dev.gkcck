@@ -1,7 +1,7 @@
 <script lang="ts">
   import { BROWSER } from 'esm-env';
   import { onMount } from 'svelte';
-  import { CarouselKit } from '@daks.dev/svelte.pack';
+  import { CarouselKit } from '@daks.dev/svelte.sdk';
 
   let className: ClassName = undefined;
   export { className as class };

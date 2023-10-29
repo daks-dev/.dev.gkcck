@@ -1,5 +1,5 @@
-@import '@daks.dev/svelte.kit/fonts/open-sans/variable';
-@import '@daks.dev/svelte.kit/tailwindcss';
+@import '@daks.dev/svelte.sdk/fonts/open-sans/variable';
+@import '@daks.dev/svelte.sdk/tailwind';
 
 @layer base {
   :root {
@@ -7,30 +7,30 @@
   }
 
   body {
-    @apply relative font-normal
-           text-gray-800 dark:text-neutral-200
-           bg-neutral-100 dark:bg-gray-800
-           transition-colors duration-300 ease-in-out
-           -lg:snap-start;
+    @apply -lg:snap-start relative
+           bg-neutral-100 font-normal
+           text-gray-800 transition-colors
+           duration-300 ease-in-out dark:bg-gray-800
+           dark:text-neutral-200;
   }
 
   h1 {
-    @apply uppercase tracking-wide
-           text-2xl sm:text-2.5xl md:text-3xl lg:text-3.5xl
-           text-gray-500 dark:text-gray-400;
+    @apply sm:text-2.5xl lg:text-3.5xl
+           text-2xl uppercase tracking-wide text-gray-500
+           dark:text-gray-400 md:text-3xl;
   }
   section h1 {
-    @apply text-1.5xl sm:text-2xl md:text-2.5xl lg:text-3xl
-           !text-accent;
+    @apply text-1.5xl md:text-2.5xl !text-accent sm:text-2xl
+           lg:text-3xl;
   }
 
   h2 {
-    @apply tracking-wide
-           text-1.5xl md:text-2xl lg:text-2.5xl;
+    @apply text-1.5xl
+           lg:text-2.5xl tracking-wide md:text-2xl;
   }
   section h2 {
-    @apply text-1.5xl lg:text-2xl
-           text-gray-600 dark:text-gray-300;
+    @apply text-1.5xl text-gray-600
+           dark:text-gray-300 lg:text-2xl;
   }
 
   h3 {
@@ -67,28 +67,28 @@
     @apply list-none pl-0 indent-0;
   }
   ul.pseudo li {
-    @apply relative ml-6
-           before:content-['\25B7']
+    @apply before:text-brand relative
+           ml-6
            before:absolute before:-left-6 before:-top-0.5
-           before:font-bold before:text-brand;
+           before:font-bold before:content-['\25B7'];
   }
 
   .title {
-    @apply after:content-null after:block after:mt-2
-           after:w-[132px] after:h-[5px]
-           after:bg-accent;
+    @apply after:content-null after:bg-accent after:mt-2
+           after:block after:h-[5px]
+           after:w-[132px];
   }
 }
 
 main,
 [role='main'] {
-  @apply flex flex-col mb-8;
+  @apply mb-8 flex flex-col;
   padding-top: var(--navbar-height);
 }
 main > header,
 [role='main'] > header {
-  @apply pt-4 sm:pt-5 md:pt-8
-         mb-8 lg:mb-12;
+  @apply mb-8 pt-4 sm:pt-5
+         md:pt-8 lg:mb-12;
 }
 
 /* home */
@@ -104,13 +104,13 @@ main > header,
 
 /* laboratory-support */
 .table--custom tr {
-  @apply border dark:border-gray-700 even:bg-gray-200/70 dark:even:bg-gray-700/30;
+  @apply border even:bg-gray-200/70 dark:border-gray-700 dark:even:bg-gray-700/30;
 }
 .table--custom th {
-  @apply p-2 sm:p-2 font-semibold;
+  @apply p-2 font-semibold sm:p-2;
 }
 .table--custom td {
-  @apply p-1 sm:p-2 border dark:border-gray-700;
+  @apply border p-1 dark:border-gray-700 sm:p-2;
 }
 
 /* Yandex */

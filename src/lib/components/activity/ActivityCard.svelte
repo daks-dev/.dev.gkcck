@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Icon, Sign } from '@daks.dev/svelte.pack';
+  import { Icon, Sign } from '@daks.dev/svelte.sdk';
   import twMerge from '$lib/assets/tailwindcss';
 
   let className: ClassName = undefined;
@@ -14,7 +14,7 @@
 <svelte:element
   this={href ? 'a' : 'div'}
   class={twMerge(
-    'relative group py-4 p-7',
+    'group relative p-7 py-4',
     'flex flex-col',
     'rounded border border-current shadow',
     animate,
@@ -22,37 +22,37 @@
   )}
   {href}>
   <Sign
-    class="top-1 left-1"
+    class="left-1 top-1"
     link
     small />
   <slot name="title" />
-  <div class="pl-4 mt-2 mb-7 flex flex-col grow justify-center">
+  <div class="mb-7 mt-2 flex grow flex-col justify-center pl-4">
     <slot>
       <div class="text-slate-500">
         Объектов реализовано:
-        <span class="text-2xl text-brand">...</span>
+        <span class="text-brand text-2xl">...</span>
       </div>
       <div class="text-slate-500">
         Объекты в работе:
-        <span class="text-2xl text-brand">...</span>
+        <span class="text-brand text-2xl">...</span>
       </div>
     </slot>
   </div>
   <div class="flex items-start gap-5 text-slate-500">
     <Icon
       class="
-        drop-shadow-deep group-hover:drop-shadow-md
-        transition-easy"
+        drop-shadow-deep transition-easy
+        group-hover:drop-shadow-md"
       icon="ic:round-account-circle"
       {size} />
-    <div class="flex flex-col gap-3 grow opacity-75">
+    <div class="flex grow flex-col gap-3 opacity-75">
       <small>руководитель направления:</small>
       <div
         class="
-          flex flex-col gap-2 grow
-          opacity-75
-          drop-shadow-deep group-hover:drop-shadow-none
-          transition-easy">
+          drop-shadow-deep transition-easy flex grow
+          flex-col
+          gap-2 opacity-75
+          group-hover:drop-shadow-none">
         <div class="h-2.5 w-3/4 rounded-full bg-current" />
         <div class="h-2 w-full rounded-full bg-current" />
       </div>

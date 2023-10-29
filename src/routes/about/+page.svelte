@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { YandexMetrikaHit } from '@daks.dev/svelte-yandex';
+  import { YandexMetrikaHit } from '@daks.dev/svelte.sdk';
   import { YandexMap } from '$lib/components';
 
   import type { PageData } from './$types';
@@ -19,15 +19,15 @@
     <h1 class="title">О группе компаний</h1>
   </header>
 
-  <div class="content readable text-justify flex flex-col lg:block">
+  <div class="content readable flex flex-col text-justify lg:block">
     <YandexMap
       class="
-        hidden sm:block order-last overflow-hidden
-        w-full aspect-video my-4
+        lg:aspect-4/3 order-last my-4 hidden
+        aspect-video w-full overflow-hidden
         border-4 border-slate-400
-        lg:float-left lg:mt-1.5 lg:mr-5 lg:mb-2 lg:max-w-md lg:aspect-4/3
-        lg:drop-shadow-md lg:hover:drop-shadow-none
-        lg:rounded-lg lg:border"
+        sm:block lg:float-left lg:mb-2 lg:mr-5 lg:mt-1.5 lg:max-w-md
+        lg:rounded-lg lg:border
+        lg:drop-shadow-md lg:hover:drop-shadow-none"
       {projects} />
 
     <p>
@@ -80,15 +80,15 @@
       выполнять работы для наших Заказчиков по
       <em
         class="
-        w-full mt-2
-        flex justify-center gap-1 sm:gap-2 lg:ga-4 2xl:gap-8
-        not-italic xs:text-lg sm:text-xl sm:tracking-wider lg:tracking-widest">
+        lg:ga-4 xs:text-lg
+        mt-2 flex w-full justify-center gap-1 not-italic
+        sm:gap-2 sm:text-xl sm:tracking-wider lg:tracking-widest 2xl:gap-8">
         <span class="first-letter:text-brand">Современным</span>
         <span class="first-letter:text-brand">Стандартам</span>
         <span class="first-letter:text-brand">Качества</span>
       </em>
     </p>
 
-    <hr class="my-7 border-brand" />
+    <hr class="border-brand my-7" />
   </div>
 </main>

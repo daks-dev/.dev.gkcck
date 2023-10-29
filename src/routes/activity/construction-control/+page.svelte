@@ -7,7 +7,7 @@
     WidgetPlaceholder,
     YandexMetrikaHit,
     audio
-  } from '@daks.dev/svelte.pack';
+  } from '@daks.dev/svelte.sdk';
 
   const title = 'ГК ССК • Строительный контроль';
   const description = 'Выполнение строительного контроля группой компаний «ССК»';
@@ -26,10 +26,10 @@
 
   <div class="content space-y-8">
     <ImagePlaceholder />
-    <div class="flex -md:flex-col gap-8">
-      <div class="flex flex-col justify-center gap-16 grow -md:order-1">
+    <div class="-md:flex-col flex gap-8">
+      <div class="-md:order-1 flex grow flex-col justify-center gap-16">
         <TextPlaceholder class="w-full" />
-        <TestimonialPlaceholder class="w-full max-w-sm mx-auto" />
+        <TestimonialPlaceholder class="mx-auto w-full max-w-sm" />
       </div>
       <WidgetPlaceholder class="mx-auto" />
     </div>

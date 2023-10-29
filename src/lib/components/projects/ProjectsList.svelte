@@ -2,7 +2,7 @@
   import { beforeUpdate, afterUpdate } from 'svelte';
   import { sineIn, sineOut } from 'svelte/easing';
   import { blur, fade } from 'svelte/transition';
-  import { Icon, Figure, Sign, scroll } from '@daks.dev/svelte.pack';
+  import { Icon, Figure, Sign, scroll } from '@daks.dev/svelte.sdk';
   import { YandexMap } from '$lib/components';
 
   export let projects: Project[];
@@ -36,15 +36,15 @@
 
 <div
   class="
-    content mb-4 overflow-hidden
-    flex items-center gap-4">
-  <span class="p-1.5 mr-auto">[{projects.length}]</span>
+    content mb-4 flex
+    items-center gap-4 overflow-hidden">
+  <span class="mr-auto p-1.5">[{projects.length}]</span>
   <button
     on:click={() => (mode = 0)}
     class="
-      p-1.5 rounded
-      hover:bg-gray-300 dark:hover:bg-gray-700
-      disabled:text-cyan-600 dark:disabled:text-cyan-700"
+      rounded p-1.5
+      hover:bg-gray-300 disabled:text-cyan-600
+      dark:hover:bg-gray-700 dark:disabled:text-cyan-700"
     type="button"
     disabled={!mode || undefined}>
     <Icon
@@ -54,9 +54,9 @@
   <button
     on:click={() => (mode = 1)}
     class="
-      p-1.5 rounded
-      hover:bg-gray-300 dark:hover:bg-gray-700
-      disabled:text-cyan-600 dark:disabled:text-cyan-700"
+      rounded p-1.5
+      hover:bg-gray-300 disabled:text-cyan-600
+      dark:hover:bg-gray-700 dark:disabled:text-cyan-700"
     type="button"
     disabled={mode === 1 || undefined}>
     <Icon
@@ -66,10 +66,10 @@
   <button
     on:click={() => (mode = 2)}
     class="
-      hidden sm:block
-      p-1.5 rounded
-      hover:bg-gray-300 dark:hover:bg-gray-700
-      disabled:text-cyan-600 dark:disabled:text-cyan-700"
+      hidden rounded
+      p-1.5 hover:bg-gray-300
+      disabled:text-cyan-600 dark:hover:bg-gray-700
+      dark:disabled:text-cyan-700 sm:block"
     type="button"
     disabled={mode === 2 || undefined}>
     <Icon
@@ -89,19 +89,19 @@
       {@const idx = random(images?.squares)}
       {@const data = { ...images?.squares[idx], title: name, description: address }}
       <a
-        class="relative group"
+        class="group relative"
         href={`/projects/${id.toString().padStart(3, '0')}`}>
         <Sign
-          class="top-2 left-2"
+          class="left-2 top-2"
           link
           dark />
         <Figure
           class="
-            overflow-hidden
-            rounded border border-slate-400
-            drop-shadow-deep group-hover:drop-shadow-md
-            transition-easy
-            pointer-events-none"
+            drop-shadow-deep
+            transition-easy pointer-events-none overflow-hidden
+            rounded border
+            border-slate-400
+            group-hover:drop-shadow-md"
           custom={{
             image: grayscale ? 'grayscale group-hover:grayscale-0 transition-easy' : undefined,
             caption: `
@@ -135,15 +135,15 @@
     {#each projects as { id, name, address, area, area_unit }, idx}
       <a
         class="
-          group px-2 py-4
-          grid grid-cols-[32px_minmax(0,_1fr)_96px] md:grid-cols-[32px_256px_minmax(0,_1fr)_96px] items-center
-          odd:bg-slate-400/25 dark:even:bg-slate-700/25
-          hover:bg-slate-400 dark:hover:bg-slate-700 hover:drop-shadow-md"
+          group grid grid-cols-[32px_minmax(0,_1fr)_96px]
+          items-center px-2 py-4 odd:bg-slate-400/25
+          hover:bg-slate-400 hover:drop-shadow-md
+          dark:even:bg-slate-700/25 dark:hover:bg-slate-700 md:grid-cols-[32px_256px_minmax(0,_1fr)_96px]"
         href={`/projects/${id.toString().padStart(3, '0')}`}>
         <small>{idx + 1}</small>
         <span
           class="-xs:col-span-2
-            text-cyan-700 dark:text-cyan-600 group-hover:text-sky-700">
+            text-cyan-700 group-hover:text-sky-700 dark:text-cyan-600">
           {name}
         </span>
         <small class="-md:hidden">{address}</small>
@@ -158,9 +158,9 @@
   <div class="wrapper hidden sm:block">
     <YandexMap
       class="
-        w-full aspect-square lg:aspect-video
-        bg-gray-100 dark:bg-slate-200 bg-no-repeat bg-center bg-waiting bg-25% sm:bg-20% md:bg-10%
-        border-4 border-slate-400"
+        bg-waiting bg-25% sm:bg-20%
+        md:bg-10% aspect-square w-full border-4 border-slate-400 bg-gray-100 bg-center bg-no-repeat
+        dark:bg-slate-200 lg:aspect-video"
       {projects}
       {center}
       {zoom} />

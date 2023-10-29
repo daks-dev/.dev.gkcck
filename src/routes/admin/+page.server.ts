@@ -1,4 +1,4 @@
-import { fs } from '@daks.dev/svelte.pack/server';
+import { fs } from '@daks.dev/svelte.sdk/server';
 import type { PageServerLoad } from './$types';
 
 export const load = (async () => ({

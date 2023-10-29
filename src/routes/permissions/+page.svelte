@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { placeholder } from '@daks.dev/svelte.pack';
-  import { YandexMetrikaHit } from '@daks.dev/svelte-yandex';
+  import { placeholder } from '@daks.dev/svelte.sdk';
+  import { YandexMetrikaHit } from '@daks.dev/svelte.sdk';
   import { Toast } from '$lib/components';
   import { sources as images } from '$lib/content/permissions';
 
@@ -42,28 +42,28 @@
       учебных программ для обучения молодых специалистов
       <em
         class="
-      w-full mt-2
-      flex justify-center gap-1 sm:gap-2 lg:ga-4 2xl:gap-8
-      not-italic xs:text-lg sm:text-xl sm:tracking-wider lg:tracking-widest">
+      lg:ga-4 xs:text-lg
+      mt-2 flex w-full justify-center gap-1 not-italic
+      sm:gap-2 sm:text-xl sm:tracking-wider lg:tracking-widest 2xl:gap-8">
         <span class="first-letter:text-brand">Современным</span>
         <span class="first-letter:text-brand">Стандартам</span>
         <span class="first-letter:text-brand">Качества</span>
       </em>
     </p>
 
-    <hr class="my-7 border-brand" />
+    <hr class="border-brand my-7" />
   </div>
 
   <section class="content readable">
     <h1 class="mb-4 text-center uppercase">Допуски СРО</h1>
 
-    <div class="grid sm:grid-cols-[240px_minmax(0,_1fr)] gap-5 items-center">
+    <div class="grid items-center gap-5 sm:grid-cols-[240px_minmax(0,_1fr)]">
       <h2 class="col-span-full uppercase">Строительство:</h2>
       <img
         class="
           lazy
-          rounded border
-          bg-center bg-no-repeat bg-1/5 bg-loading bg-white drop-shadow-md"
+          bg-1/5 bg-loading
+          rounded border bg-white bg-center bg-no-repeat drop-shadow-md"
         src={placeholder}
         data-src={images[0].src}
         width={images[0].width}
@@ -78,8 +78,8 @@
       <img
         class="
           lazy
-          rounded border
-          bg-center bg-no-repeat bg-1/5 bg-loading bg-white drop-shadow-md"
+          bg-1/5 bg-loading
+          rounded border bg-white bg-center bg-no-repeat drop-shadow-md"
         src={placeholder}
         data-src={images[1].src}
         width={images[1].width}
@@ -96,8 +96,8 @@
       <img
         class="
           lazy
-          rounded border
-          bg-center bg-no-repeat bg-1/5 bg-loading bg-white drop-shadow-md"
+          bg-1/5 bg-loading
+          rounded border bg-white bg-center bg-no-repeat drop-shadow-md"
         src={placeholder}
         data-src={images[2].src}
         width={images[2].width}
@@ -114,8 +114,8 @@
       <img
         class="
           lazy
-          rounded border
-          bg-center bg-no-repeat bg-1/5 bg-loading bg-white drop-shadow-md"
+          bg-1/5 bg-loading
+          rounded border bg-white bg-center bg-no-repeat drop-shadow-md"
         src={placeholder}
         data-src={images[3].src}
         width={images[3].width}
@@ -130,7 +130,7 @@
       </p>
     </div>
 
-    <hr class="my-7 border-brand" />
+    <hr class="border-brand my-7" />
   </section>
 
   <section class="content readable">
@@ -143,7 +143,7 @@
     <p>
       Внедрённая в Компании СМК, основанная на принципах ГОСТ Р ИСО 9001–2008, позволила настроить:
     </p>
-    <ul class="ml-2 mb-4">
+    <ul class="mb-4 ml-2">
       <li>оптимальную организационную структуру ГК;</li>
       <li>
         систему административного управления, направленную на совершенствование деятельности
@@ -190,19 +190,19 @@
       </li>
     </ul>
 
-    <hr class="my-7 border-brand" />
+    <hr class="border-brand my-7" />
   </section>
 
   <section class="content readable">
     <h1 class="mb-4 text-center uppercase">Аккредитации</h1>
 
-    <div class="flex -md:flex-wrap justify-around gap-8">
+    <div class="-md:flex-wrap flex justify-around gap-8">
       <div>
         <h4 class="mb-2">
           Свидетельство
           <span class="whitespace-nowrap">№ RA.RU.611860</span>
         </h4>
-        <p class="font-semibold mb-4">
+        <p class="mb-4 font-semibold">
           Аккредитация юридических лиц на право проведения негосударственной экспертизы проектной
           документации и (или) негосударственной экспертизы результатов инженерных изысканий
         </p>
@@ -215,7 +215,7 @@
           Свидетельство
           <span class="whitespace-nowrap">№ RA.RU.611860</span>
         </h4>
-        <p class="font-semibold mb-4">
+        <p class="mb-4 font-semibold">
           Аккредитация юридических лиц на право проведения негосударственной экспертизы проектной
           документации и (или) негосударственной экспертизы результатов инженерных изысканий
         </p>
@@ -225,7 +225,7 @@
       </div>
     </div>
 
-    <hr class="my-7 border-brand" />
+    <hr class="border-brand my-7" />
   </section>
 
   <section class="content readable">
@@ -248,7 +248,7 @@
       </li>
     </ul>
 
-    <hr class="my-7 border-brand" />
+    <hr class="border-brand my-7" />
   </section>
 
   <section class="content readable">

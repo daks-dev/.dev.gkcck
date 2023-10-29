@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { Sign, YandexMetrikaHit } from '@daks.dev/svelte.pack';
+  import { Sign, YandexMetrikaHit } from '@daks.dev/svelte.sdk';
   import {
     ActivityCard,
     HomeHeader,
@@ -45,11 +45,11 @@
       flex flex-wrap justify-around gap-y-8 gap-x-16
     -->
     <section class="wrapper pt-12 lg:pt-16">
-      <h2 class="mb-8 text-brand">Направления деятельности</h2>
+      <h2 class="text-brand mb-8">Направления деятельности</h2>
       <div
         class="
-          w-fit max-w-full mx-auto
-          grid grid-cols-none md:grid-cols-2 gap-8 lg:gap-x-16 2xl:gap-x-32">
+          mx-auto grid w-fit
+          max-w-full grid-cols-none gap-8 md:grid-cols-2 lg:gap-x-16 2xl:gap-x-32">
         {#each activity.links as { href, label }}
           <ActivityCard
             class="w-full hover:bg-slate-300/20"
@@ -57,8 +57,8 @@
             <h4
               slot="title"
               class="
-                text-accent group-hover:text-brand group-hover:drop-shadow-md
-                transition-easy">
+                text-accent group-hover:text-brand transition-easy
+                group-hover:drop-shadow-md">
               {@html label}
             </h4>
           </ActivityCard>
@@ -69,35 +69,35 @@
 
   <YandexMap
     class="
-      hidden sm:block
-      w-full mx-auto max-w-xl aspect-video mt-16
-      lg:absolute lg:top-[3vh] lg:right-[7vw] xl:top-[5vh] xl:right-[10vw] 3xl:top-[7vh] 3xl:right-[20vw]
-      lg:max-w-md lg:aspect-4/3
-      lg:drop-shadow-brand lg:hover:drop-shadow-md
-      overflow-hidden
-      bg-slate-200/75 bg-no-repeat bg-center bg-waiting bg-20%
-      border-4 border-slate-400 
+      3xl:top-[7vh] 3xl:right-[20vw]
+      lg:aspect-4/3 lg:drop-shadow-brand bg-waiting bg-20% mx-auto
+      mt-16 hidden aspect-video w-full max-w-xl overflow-hidden border-4
+      border-slate-400 bg-slate-200/75
+      bg-center bg-no-repeat
+      transition
+      duration-500 ease-in-out sm:block lg:absolute lg:right-[7vw]
+      lg:top-[3vh] lg:max-w-md
       lg:rounded-lg lg:border
-      transition duration-500 ease-in-out"
+      lg:hover:drop-shadow-md xl:right-[10vw] xl:top-[5vh]"
     {projects}
     scaled />
 
   <section class="wrapper pt-12 lg:pt-16">
-    <h2 class="mb-8 text-brand">О нас</h2>
-    <div class="flex -md:flex-wrap justify-center gap-8">
+    <h2 class="text-brand mb-8">О нас</h2>
+    <div class="-md:flex-wrap flex justify-center gap-8">
       <a
         class="
-          relative group
-          shrink-0 w-80 h-fit
-          order-1 md:order-none
-          drop-shadow-md hover:drop-shadow-sm"
+          group relative
+          order-1 h-fit w-80
+          shrink-0 drop-shadow-md
+          hover:drop-shadow-sm md:order-none"
         href="/partners">
         <Sign
-          class="top-2 left-2"
+          class="left-2 top-2"
           link
           light />
         <PartnersCarousel
-          class="rounded border overflow-hidden pointer-events-none"
+          class="pointer-events-none overflow-hidden rounded border"
           {partners}
           controls=""
           duration={500}

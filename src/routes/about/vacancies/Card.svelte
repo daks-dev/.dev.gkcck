@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { twMerge } from '@daks.dev/svelte.pack';
+  import { twMerge } from '@daks.dev/svelte.sdk';
 
   let className: ClassName = undefined;
   export { className as class };
@@ -8,8 +8,8 @@
 </script>
 
 <div
-  class={twMerge('w-full max-w-xs p-4 mx-auto', 'flex flex-col', 'rounded-md border-2', className)}>
-  <h4 class="mb-4 sm:h-12 text-accent text-center">
+  class={twMerge('mx-auto w-full max-w-xs p-4', 'flex flex-col', 'rounded-md border-2', className)}>
+  <h4 class="text-accent mb-4 text-center sm:h-12">
     {title}
   </h4>
   <slot />

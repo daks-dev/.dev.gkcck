@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Sign, Figure } from '@daks.dev/svelte.pack';
+  import { Sign, Figure } from '@daks.dev/svelte.sdk';
   //import { sources as logotypes } from '$lib/content/partners/images';
 
   import microdata from '$lib/configs/microdata';
@@ -50,7 +50,7 @@
     {/if}
     {#if scope}
       <div class="flex gap-x-2">
-        <dt class="font-semibold text-slate-500 whitespace-nowrap">
+        <dt class="whitespace-nowrap font-semibold text-slate-500">
           {scope_term || 'Этажность'}:
         </dt>
         <dd>{scope}</dd>
@@ -70,24 +70,24 @@
   {#if customer}
     <a
       class="
-        relative w-fit
-        group drop-shadow-md hover:drop-shadow-sm"
+        group relative
+        w-fit drop-shadow-md hover:drop-shadow-sm"
       href="/partners/{customer.id.toString().padStart(3, '0')}">
       <Sign
-        class="top-0 left-full ml-1"
+        class="left-full top-0 ml-1"
         link
         small />
       <Figure
         class="hidden md:flex"
         custom={{ image: 'border border-slate-400 drop-shadow w-auto max-h-44' }}
         data={customer.images?.sources[0]} />
-      <h2 class="md:hidden font-semibold text-slate-500">
+      <h2 class="font-semibold text-slate-500 md:hidden">
         {customer.name}
       </h2>
     </a>
   {:else}
     <img
-      class="mr-auto h-20 sm:h-24 md:h-28 w-auto drop-shadow-deep"
+      class="drop-shadow-deep mr-auto h-20 w-auto sm:h-24 md:h-28"
       src={logo}
       alt="" />
   {/if}

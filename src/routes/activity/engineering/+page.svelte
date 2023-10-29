@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { YandexMetrikaHit } from '@daks.dev/svelte-yandex';
+  import { YandexMetrikaHit } from '@daks.dev/svelte.sdk';
 
   const title = 'ГК ССК • Проектирование';
   const description = 'Проектирование в группе компаний «ССК»';
@@ -39,15 +39,15 @@
       и другим требованиям
       <em
         class="
-        w-full mt-2
-        flex justify-center gap-1 sm:gap-2 lg:ga-4 2xl:gap-8
-        not-italic xs:text-lg sm:text-xl sm:tracking-wider lg:tracking-widest">
+        lg:ga-4 xs:text-lg
+        mt-2 flex w-full justify-center gap-1 not-italic
+        sm:gap-2 sm:text-xl sm:tracking-wider lg:tracking-widest 2xl:gap-8">
         <span class="first-letter:text-brand">Современных</span>
         <span class="first-letter:text-brand">Стандартов</span>
         <span class="first-letter:text-brand">Качества</span>
       </em>
     </p>
 
-    <hr class="my-7 border-brand" />
+    <hr class="border-brand my-7" />
   </div>
 </main>

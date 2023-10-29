@@ -1,4 +1,4 @@
-import { globIndex, globInfoset, globDataset } from '@daks.dev/vite-imagetools';
+import { globIndex, globInfoset, globDataset } from '@daks.dev/svelte.sdk';
 
 const idxs = globIndex(
   import.meta.glob('./*.(heic|heif|avif|jpeg|jpg|png|tiff|webp|gif)', {
@@ -22,7 +22,7 @@ export const sources = globDataset(
     query: { w: 320, background: 'white', meta: true },
     import: 'default',
     eager: true
-  })
+  }) as unknown as ImageMetadata
 );
 
 export const squares = globDataset(
@@ -32,7 +32,7 @@ export const squares = globDataset(
     query: { w: 320, h: 320, fit: 'contain', background: 'white', meta: true },
     import: 'default',
     eager: true
-  })
+  }) as unknown as ImageMetadata
 );
 
 export default {

@@ -4,7 +4,7 @@
   import { fade, fly, scale } from 'svelte/transition';
   import { sineIn } from 'svelte/easing';
   import { beforeNavigate } from '$app/navigation';
-  import { YandexMap, type YandexMapInstance } from '@daks.dev/svelte.pack';
+  import { YandexMap, type YandexMapInstance } from '@daks.dev/svelte.sdk';
   import twMerge from '$lib/assets/tailwindcss';
 
   let className: ClassName = undefined;
@@ -113,7 +113,7 @@
     <YandexMap
       bind:map
       class={twMerge(
-        'ymaps--left-copyright w-full h-full'
+        'ymaps--left-copyright h-full w-full'
         // grayscale && 'grayscale hover:grayscale-0'
         // sepia && 'sepia hover:sepia-0'
       )}

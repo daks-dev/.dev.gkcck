@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { AppHead, IconifyAdmin } from '@daks.dev/svelte.pack';
-  import { navigate } from '@daks.dev/svelte.pack/stores';
+  import { Head, IconifyAdmin } from '@daks.dev/svelte.sdk';
+  import { navigate } from '@daks.dev/svelte.sdk/stores';
 
   $navigate = {
     prev: {
@@ -18,7 +18,7 @@
   const title = 'ГК ССК • Admin [ Iconify ]';
 </script>
 
-<AppHead
+<Head
   {robots}
   {title} />
 

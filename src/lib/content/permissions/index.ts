@@ -1,4 +1,4 @@
-import { globIndex, globInfoset, globDataset } from '@daks.dev/vite-imagetools';
+import { globIndex, globInfoset, globDataset } from '@daks.dev/svelte.sdk';
 
 const idxs = globIndex(
   import.meta.glob('./*.(heic|heif|avif|jpeg|jpg|png|tiff|webp|gif)', {
@@ -22,7 +22,7 @@ export const sources = globDataset(
     query: { meta: true },
     import: 'default',
     eager: true
-  })
+  }) as unknown as ImageMetadata
 );
 
 export default {

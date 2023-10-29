@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { YandexMetrikaHit } from '@daks.dev/svelte-yandex';
+  import { YandexMetrikaHit } from '@daks.dev/svelte.sdk';
 
   const title = 'ГК ССК • Лабораторное сопровождение';
   const description = 'Выполнение лабораторного сопровождения группой компаний «ССК»';
@@ -15,7 +15,7 @@
   </header>
 
   <div class="content readable">
-    <ul class="pseudo mb-8 before:text-brand lg:text-lg">
+    <ul class="pseudo before:text-brand mb-8 lg:text-lg">
       <li>
         Лабораторный контроль качества строительно-монтажных материалов в том числе сварочных работ.
       </li>
@@ -30,9 +30,9 @@
     <table
       class="
         table--custom
-        border-collapse
-        text-2xs xs:text-xs sm:text-sm md:text-base">
-      <thead class="font-semibold bg-gray-300 dark:bg-gray-600/50">
+        text-2xs
+        xs:text-xs border-collapse sm:text-sm md:text-base">
+      <thead class="bg-gray-300 font-semibold dark:bg-gray-600/50">
         <tr>
           <th>№ п/п</th>
           <th>Наименование испытываемой продукции</th>

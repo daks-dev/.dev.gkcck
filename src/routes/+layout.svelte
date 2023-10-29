@@ -2,13 +2,13 @@
   import { BROWSER } from 'esm-env';
   import {
     lazyload,
-    AppHead,
+    Head,
     Footer,
     NavbarKit,
     RouteTransition,
     ScreenBlock,
     YandexMetrikaInit
-  } from '@daks.dev/svelte.pack';
+  } from '@daks.dev/svelte.sdk';
   import { NavPath } from '$lib/components';
 
   import '../app.css';
@@ -22,10 +22,10 @@
   BROWSER && (document.lazyload ??= lazyload());
 </script>
 
-<AppHead {app} />
+<Head {app} />
 
 <RouteTransition
-  class="flex flex-col grow"
+  class="flex grow flex-col"
   refresh={data.refresh}
   mode="1">
   <slot />

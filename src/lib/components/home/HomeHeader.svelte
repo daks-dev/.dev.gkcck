@@ -3,7 +3,7 @@
   import { onMount } from 'svelte';
   import { blur } from 'svelte/transition';
   import { sineIn } from 'svelte/easing';
-  import { Icon } from '@daks.dev/svelte.pack';
+  import { Icon } from '@daks.dev/svelte.sdk';
 
   const getter = async () => ({
     srcset: (await import('$lib/assets/images/bg/home.webp?w=640;1024;1440&srcset')).default,
@@ -32,7 +32,7 @@
   });
 </script>
 
-<header class="relative min-h-screen--navbar mb-0 bg--pattern">
+<header class="min-h-screen--navbar bg--pattern relative mb-0">
   {#if visible && poster}
     {#await getter() then { srcset, fallback }}
       <img
@@ -43,10 +43,10 @@
           easing: sineIn
         }}
         class="
-          absolute top-0 left-0 w-full h-full max-h-full
-          object-cover object-top lg:object-center
-          grayscale dark:invert dark:opacity-20
-          transition duration-500 ease-in-out"
+          absolute left-0 top-0 h-full max-h-full w-full
+          object-cover object-top grayscale
+          transition duration-500 ease-in-out
+          dark:opacity-20 dark:invert lg:object-center"
         {srcset}
         src={fallback.src}
         alt=""
@@ -57,9 +57,9 @@
 
   <img
     class="
-        absolute top-[4vh] left-[4vw] lg:left-[7vw] 2xl:left-[12vw] 3xl:left-[7vw]
-        h-[15vh] lg:h-[12.5vh]
-        drop-shadow-deep"
+        3xl:left-[7vw] drop-shadow-deep absolute left-[4vw] top-[4vh] h-[15vh]
+        lg:left-[7vw] lg:h-[12.5vh]
+        2xl:left-[12vw]"
     src={logo}
     alt=""
     itemprop="logo" />
@@ -67,12 +67,15 @@
   <div
     class="
         xs:hidden
-        w-full pt-[33vh]
-        flex flex-row justify-center gap-8 items-center">
+        flex w-full
+        flex-row items-center justify-center gap-8 pt-[33vh]">
     <a
       class={button}
       href="tel://{telephone.replace(/[\s-()]/g, '')}"
+      aria-label="telephone"
+      aria-hidden="true"
       itemprop="telephone">
+      <span class="sr-only">telephone</span>
       <Icon
         icon="ic:round-phone-in-talk"
         size="4em" />
@@ -80,7 +83,10 @@
     <a
       class={button}
       href="mailto:{email}"
+      aria-label="email"
+      aria-hidden="true"
       itemprop="email">
+      <span class="sr-only">email</span>
       <Icon
         icon="ic:round-mail-outline"
         size="4em" />
@@ -89,11 +95,11 @@
 
   <h1
     class="
-        absolute bottom-[10vh] left-[7vw] xl:left-[12vw]
-        flex flex-col gap-4
-        font-black tracking-wider text-shadow--home
-        text-gray-700 dark:text-neutral-300
-        text-4xl xs:text-5xl sm:text-6xl lg:text-7xl">
+        text-shadow--home xs:text-5xl absolute bottom-[10vh]
+        left-[7vw] flex flex-col
+        gap-4 text-4xl font-black
+        tracking-wider text-gray-700
+        dark:text-neutral-300 sm:text-6xl lg:text-7xl xl:left-[12vw]">
     <span class="first-letter:text-brand">Современные</span>
     <span class="first-letter:text-brand">Стандарты</span>
     <span class="first-letter:text-brand">Качества</span>
@@ -101,12 +107,12 @@
 
   <a
     class="
-      hidden md:flex gap-1 items-center
-      absolute bottom-[10vh] right-[7vw] 2xl:right-[12vw] 3xl:right-[7vw]
-      font-mono font-black tracking-tighter
-      text-3xl text-slate-600 dark:text-neutral-400
-      drop-shadow-deep
-      transition-easy"
+      3xl:right-[7vw] drop-shadow-deep transition-easy absolute
+      bottom-[10vh] right-[7vw] hidden items-center gap-1
+      font-mono text-3xl font-black
+      tracking-tighter text-slate-600 dark:text-neutral-400
+      md:flex
+      2xl:right-[12vw]"
     href="tel://{telephone.replace(/[\s-()]/g, '')}"
     itemprop="telephone">
     <span>{tel.substring(0, 7)}</span>
@@ -117,11 +123,14 @@
     <button
       on:click={handlePoster}
       class="
-        absolute bottom-[4vh] right-[4vw] lg:right-[3vw] 2xl:right-[2vw]
-        drop-shadow-deep opacity-50 hover:opacity-100
-        transition duration-300"
+        drop-shadow-deep absolute bottom-[4vh] right-[4vw] opacity-50
+        transition duration-300 hover:opacity-100
+        lg:right-[3vw] 2xl:right-[2vw]"
       class:rotate-45={!poster}
-      type="button">
+      type="button"
+      aria-label="poster"
+      aria-hidden="true">
+      <span class="sr-only">poster</span>
       <Icon
         icon="ic:round-close"
         size="2em" />

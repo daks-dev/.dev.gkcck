@@ -1,4 +1,4 @@
-import { Nav, type NavSite } from '@daks.dev/svelte.pack';
+import { Nav, type NavSite } from '@daks.dev/svelte.sdk';
 
 const config: NavSite = {
   navbar: {

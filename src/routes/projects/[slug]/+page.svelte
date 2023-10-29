@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { YandexMap, YandexMetrikaHit } from '@daks.dev/svelte.pack';
-  import { navigate } from '@daks.dev/svelte.pack/stores';
+  import { YandexMap, YandexMetrikaHit } from '@daks.dev/svelte.sdk';
+  import { navigate } from '@daks.dev/svelte.sdk/stores';
   import Aside from './Aside.svelte';
   import Data from './Data.svelte';
   import Toast from './Toast.svelte';
@@ -53,13 +53,13 @@
       content mb-0
       flex items-start gap-2 lg:gap-4">
     <h1 class="title">{name}</h1>
-    <small class="font-semibold text-accent">({id})</small>
+    <small class="text-accent font-semibold">({id})</small>
   </header>
 
   <div
     class="
       content
-      flex -md:flex-col justify-between gap-8">
+      -md:flex-col flex justify-between gap-8">
     <Data
       {project}
       {customer} />
@@ -71,13 +71,13 @@
 
   <div
     class="
-      content flex grow
-      h-[40vmax] xs:h-[35vmax] sm:h-[30vmax] md:h-[25vmax] lg:h-auto">
+      content xs:h-[35vmax] flex
+      h-[40vmax] grow sm:h-[30vmax] md:h-[25vmax] lg:h-auto">
     <YandexMap
       class="
-        w-full min-h-full overflow-hidden
-        bg-gray-100 dark:bg-slate-200 bg-no-repeat bg-center bg-waiting bg-25% sm:bg-20% md:bg-10%
-        border-4 border-slate-400"
+        bg-waiting bg-25% sm:bg-20%
+        md:bg-10% min-h-full w-full overflow-hidden border-4 border-slate-400 bg-gray-100 bg-center
+        bg-no-repeat dark:bg-slate-200"
       data={geodata} />
   </div>
 </main>

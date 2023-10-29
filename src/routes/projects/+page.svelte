@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { YandexMetrikaHit } from '@daks.dev/svelte-yandex';
+  import { YandexMetrikaHit } from '@daks.dev/svelte.sdk';
   import { ProjectsList, Toast } from '$lib/components';
 
   import type { PageData } from './$types';

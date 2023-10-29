@@ -1,4 +1,4 @@
-/// <reference types="@daks.dev/svelte.pack/types" />
+/// <reference types="@daks.dev/svelte.sdk/types" />
 
 declare namespace App {
   // interface Locals {}
@@ -26,7 +26,7 @@ interface Project {
   customer?: number;
   priority?: number;
   hidden?: boolean;
-  images?: Record<string, Metadata[]>;
+  images: Record<string, ImageMetainfo[]>;
 }
 
 interface Partner {
@@ -43,7 +43,7 @@ interface Partner {
   zoom?: number;
   priority?: number;
   hidden?: boolean;
-  images?: Record<string, Metadata[]>;
+  images: Record<string, ImageMetainfo[]>;
 }
 
 interface Vacancy {

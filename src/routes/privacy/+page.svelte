@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { YandexMetrikaHit } from '@daks.dev/svelte-yandex';
+  import { YandexMetrikaHit } from '@daks.dev/svelte.sdk';
   import { Toast } from '$lib/components';
 
   const title = 'ГК ССК • Политика конфиденциальности';

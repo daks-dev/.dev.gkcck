@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { Figure, Icon, YandexMetrikaHit } from '@daks.dev/svelte.pack';
+  import { Figure, Icon, YandexMetrikaHit } from '@daks.dev/svelte.sdk';
   import Toast from './Toast.svelte';
   import { ProjectsList } from '$lib/components';
 
@@ -9,7 +9,7 @@
   const { partner, prev, next, projects } = data;
   const { id, name, email, telephone, address, url, title, description, center, zoom } = partner;
 
-  import { navigate } from '@daks.dev/svelte.pack/stores';
+  import { navigate } from '@daks.dev/svelte.sdk/stores';
   $navigate = { prev, next };
 
   onMount(() => document?.lazyload.update());
@@ -25,42 +25,42 @@
       content
       flex items-start gap-2 lg:gap-4">
     <h1 class="title">{name}</h1>
-    <small class="font-semibold text-accent">({id})</small>
+    <small class="text-accent font-semibold">({id})</small>
   </header>
 
-  <div class="content flex -sm:flex-col gap-8">
+  <div class="content -sm:flex-col flex gap-8">
     <Figure
       class="shrink-0"
       custom={{ image: 'border border-slate-400 drop-shadow' }}
       data={partner.images?.sources[0]} />
     <div class="space-y-4">
-      <div class="flex gap-4 items-center">
+      <div class="flex items-center gap-4">
         <Icon
-          class="shrink-0 w-8 h-8 text-cyan-700"
+          class="h-8 w-8 shrink-0 text-cyan-700"
           icon="ic:outline-location-on">
           адрес
         </Icon>
         {@html address || '&mdash;'}
       </div>
-      <div class="flex gap-4 items-center">
+      <div class="flex items-center gap-4">
         <Icon
-          class="shrink-0 w-8 h-8 text-cyan-700"
+          class="h-8 w-8 shrink-0 text-cyan-700"
           icon="ic:round-phone-android">
           телефон
         </Icon>
         {@html telephone || '&mdash;'}
       </div>
-      <div class="flex gap-4 items-center">
+      <div class="flex items-center gap-4">
         <Icon
-          class="shrink-0 w-8 h-8 text-cyan-700"
+          class="h-8 w-8 shrink-0 text-cyan-700"
           icon="ic:round-alternate-email">
           электронная почта
         </Icon>
         {@html email || '&mdash;'}
       </div>
-      <div class="flex gap-4 items-center">
+      <div class="flex items-center gap-4">
         <Icon
-          class="shrink-0 w-8 h-8 text-cyan-700"
+          class="h-8 w-8 shrink-0 text-cyan-700"
           icon="ic:round-link">
           сайт
         </Icon>

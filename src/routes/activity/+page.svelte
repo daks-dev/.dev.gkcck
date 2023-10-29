@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { YandexMetrikaHit } from '@daks.dev/svelte-yandex';
+  import { YandexMetrikaHit } from '@daks.dev/svelte.sdk';
   import { ActivityCard, ProjectsCarousel } from '$lib/components';
 
   import { nav } from '$lib/configs';
@@ -28,8 +28,8 @@
     <div class="content mb-12">
       <div
         class="
-          w-fit max-w-full mx-auto
-          grid grid-cols-none md:grid-cols-2 gap-8 lg:gap-x-16 2xl:gap-x-32">
+          mx-auto grid w-fit
+          max-w-full grid-cols-none gap-8 md:grid-cols-2 lg:gap-x-16 2xl:gap-x-32">
         {#each activity.links as { href, label }}
           <ActivityCard
             class="w-full hover:bg-slate-300/20"
@@ -37,8 +37,8 @@
             <h4
               slot="title"
               class="
-                text-accent group-hover:text-brand group-hover:drop-shadow-md
-                transition-easy">
+                text-accent group-hover:text-brand transition-easy
+                group-hover:drop-shadow-md">
               {@html label}
             </h4>
           </ActivityCard>
@@ -50,7 +50,7 @@
   <ProjectsCarousel
     class="
       content
-      rounded-md overflow-hidden
+      overflow-hidden rounded-md
       drop-shadow-md hover:drop-shadow-none"
     custom={{
       progress: 'top-0'

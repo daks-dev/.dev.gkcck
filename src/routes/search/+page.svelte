@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { YandexMetrikaHit } from '@daks.dev/svelte-yandex';
-  import { YandexSearchForm, YandexSearchSerp } from '@daks.dev/svelte.pack';
+  import { YandexMetrikaHit, YandexSearchForm, YandexSearchSerp } from '@daks.dev/svelte.sdk';
 
   const robots = 'noindex, follow';
   const title = 'ГК ССК • Поиск';
@@ -20,7 +19,7 @@
   </header>
 
   <YandexSearchForm
-    class="content mb-8 px-8 xs:pr-[44px] sm:pr-[52px] md:pr-[55px] lg:pr-[142px]"
+    class="content xs:pr-[44px] mb-8 px-8 sm:pr-[52px] md:pr-[55px] lg:pr-[142px]"
     reload
     reverse />
 

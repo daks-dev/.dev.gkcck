@@ -1,17 +1,13 @@
-import { extendTailwindMerge, mergeConfigs, type Config } from 'tailwind-merge';
-import { getTwConfig as __getTwConfig } from '@daks.dev/svelte.pack';
+import { getTwMerge } from '@daks.dev/svelte.sdk/tailwind/tailwind-merge';
+import { twmerge } from '@daks.dev/svelte.sdk/stores/nano';
 
-export const getTwConfig = (...configs: Array<Partial<Config>>) =>
-  __getTwConfig(
-    {
-      classGroups: {
-        // 'text-color': [{ text: ['accent', 'brand'] }],
-        // 'bg-color': [{ bg: ['accent', 'brand'] }],
-        // 'border-color': [{ border: ['accent', 'brand'] }],
-        'drop-shadow': [{ 'drop-shadow': ['brand'] }]
-      }
-    },
-    ...configs
-  );
+twmerge.set({
+  // 'text-color': [{ text: ['accent', 'brand'] }],
+  // 'bg-color': [{ bg: ['accent', 'brand'] }],
+  // 'border-color': [{ border: ['accent', 'brand'] }],
+  'drop-shadow': [{ 'drop-shadow': ['brand'] }]
+});
 
-export default extendTailwindMerge((config: Config): Config => mergeConfigs(config, getTwConfig()));
+const twMerge = getTwMerge();
+
+export default (...x: ClassName[]) => twMerge(...x) || undefined;

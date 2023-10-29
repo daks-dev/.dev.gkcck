@@ -1,1 +1,1 @@
-export * from '@daks.dev/svelte-iconify/upload';
+export * from '@daks.dev/svelte.sdk/iconify/upload';

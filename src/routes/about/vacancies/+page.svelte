@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { Figure, Icon, YandexMetrikaHit } from '@daks.dev/svelte.pack';
+  import { Figure, Icon, YandexMetrikaHit } from '@daks.dev/svelte.sdk';
   import image from '$lib/assets/images/team.jpg?w=320&meta';
   import Card from './Card.svelte';
 
@@ -30,23 +30,23 @@
       которая работает, применяя
       <em
         class="
-          w-full mt-4
-          flex justify-center gap-1 sm:gap-2 lg:ga-4 2xl:gap-8
-          not-italic xs:text-lg sm:text-xl sm:tracking-wider lg:tracking-widest">
+          lg:ga-4 xs:text-lg
+          mt-4 flex w-full justify-center gap-1 not-italic
+          sm:gap-2 sm:text-xl sm:tracking-wider lg:tracking-widest 2xl:gap-8">
         <span class="first-letter:text-brand">Современные</span>
         <span class="first-letter:text-brand">Стандарты</span>
         <span class="first-letter:text-brand">Качества</span>
       </em>
     </p>
 
-    <hr class="my-8 border-brand" />
+    <hr class="border-brand my-8" />
 
-    <h2 class="mb-4 text-xl text-brand">
+    <h2 class="text-brand mb-4 text-xl">
       Наша Компания заинтересована в талантливых, ответственных и способных работать в команде
       сотрудников!
     </h2>
 
-    <div class="flex sm:justify-around gap-4">
+    <div class="flex gap-4 sm:justify-around">
       <div>
         <h4 class="mb-1">Работа в ГК ССК это:</h4>
         <ul class="ml-2">
@@ -66,11 +66,11 @@
         data={image} />
     </div>
 
-    <hr class="my-8 border-brand" />
+    <hr class="border-brand my-8" />
 
     <h2 class="mb-8 text-center">Открытые вакансии на данный момент:</h2>
 
-    <div class="grid grid-cols-none sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+    <div class="mb-12 grid grid-cols-none gap-8 sm:grid-cols-2 lg:grid-cols-3">
       <Card title="Технический заказчик">
         <ul>
           <li>Инженер строительного контроля (бакалавр)</li>
@@ -99,16 +99,16 @@
 
   <a
     class="
-      group button
-      mx-auto
-      rounded-md border border-slate-500 hover:border-brand
-      bg-slate-300 dark:bg-slate-600
-      text-xl uppercase"
+      button hover:border-brand
+      group
+      mx-auto rounded-md border border-slate-500
+      bg-slate-300 text-xl
+      uppercase dark:bg-slate-600"
     href="mailto:{email}?subject=заявка о приёме на работу"
     target="_blank"
     itemprop="email">
     <Icon
-      class="w-8 h-8 mr-4 text-sky-700 dark:text-sky-600 group-hover:text-brand"
+      class="group-hover:text-brand mr-4 h-8 w-8 text-sky-700 dark:text-sky-600"
       icon="ic:round-mail-outline" />
     Отправить заявку
   </a>

@@ -5,24 +5,24 @@
     LightboxModal,
     LightboxThumbnail,
     Sign
-  } from '@daks.dev/svelte.pack';
+  } from '@daks.dev/svelte.sdk';
 
-  export let sources: Metadata[] = [];
-  export let thumbnails: Metadata[] = [];
+  export let sources: ImageMetainfo[] = [];
+  export let thumbnails: ImageMetainfo[] = [];
 </script>
 
 <LightboxList
   tag="aside"
-  class="flex md:flex-col md:items-center gap-4 min-w-fit"
+  class="flex min-w-fit gap-4 md:flex-col md:items-center"
   custom={{ overlay: 'overflow--offset' }}
   options={{ behaviour: 'loop' }}
   loader={() => document?.lazyload.update()}>
   <svelte:fragment slot="thumbnail">
     {#each thumbnails as data, idx}
       {#if idx < 1}
-        <LightboxThumbnail class="relative group h-fit first:mt-1">
+        <LightboxThumbnail class="group relative h-fit first:mt-1">
           <Sign
-            class="top-2 left-2"
+            class="left-2 top-2"
             icon="ic:round-zoom-out-map"
             dark />
           <Figure
@@ -45,7 +45,7 @@
         href={thumbnails[idx].src} />
     {/each}
     {#if sources.length > 1}
-      <span class="md:self-start font-semibold text-lg text-accent whitespace-nowrap">
+      <span class="text-accent whitespace-nowrap text-lg font-semibold md:self-start">
         [ +{sources.length - 1} ]
       </span>
     {/if}
@@ -56,7 +56,7 @@
       {subtitle}
       {description}>
       <img
-        class="bg-no-repeat bg-center bg-1/10 bg-loading"
+        class="bg-1/10 bg-loading bg-center bg-no-repeat"
         {src}
         {width}
         {height}

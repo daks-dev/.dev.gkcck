@@ -1,7 +1,7 @@
 import { resolve } from 'node:path';
 import { DEV } from 'esm-env';
 import { json } from '@sveltejs/kit';
-import { fs } from '@daks.dev/svelte.pack/server';
+import { fs } from '@daks.dev/svelte.sdk/server';
 import { getPartners, getProjects } from '$lib/shared/sql/server';
 
 const data: Record<string, string[]> = {};
