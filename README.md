@@ -40,7 +40,7 @@
 - необходимо убрать слеш в конце адреса страницы. не критично - сайт выполнит
   это програмно, но лучше опустить на нижний уровень обработки запроса
 
-  ```sh
+  ```nginx
   RewriteCond %{HTTP_HOST} (.*)
   RewriteCond %{REQUEST_URI} /$ [NC]
   RewriteRule ^(.*)(/)$ $1 [L,R=301]
@@ -57,7 +57,7 @@
 - необходимо перенаправить все запросы к несуществующим в статике адресам
   и все ошибки на страницу `/200.html`:
 
-  ```sh
+  ```nginx
   RewriteRule ^200\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
