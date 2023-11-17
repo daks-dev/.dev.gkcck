@@ -18,11 +18,11 @@
   {description} />
 
 <main itemprop="mainContentOfPage">
-  <header class="content">
+  <header class="wrapper-lg">
     <h1 class="title">Вакансии</h1>
   </header>
 
-  <div class="content readable">
+  <div class="readable wrapper-lg">
     <p class="text-justify">
       В <strong>Группе компаний ССК</strong> работают люди самых разных специальностей: инженеры,
       руководители проектов, проектировщики, сметчики, лаборанты, геодезисты и т.д. Каждый из них
@@ -30,8 +30,8 @@
       которая работает, применяя
       <em
         class="
-          lg:ga-4 xs:text-lg
-          mt-4 flex w-full justify-center gap-1 not-italic
+          lg:ga-4 mt-4
+          flex w-full justify-center gap-1 not-italic xs:text-lg
           sm:gap-2 sm:text-xl sm:tracking-wider lg:tracking-widest 2xl:gap-8">
         <span class="first-letter:text-brand">Современные</span>
         <span class="first-letter:text-brand">Стандарты</span>
@@ -39,9 +39,9 @@
       </em>
     </p>
 
-    <hr class="border-brand my-8" />
+    <hr class="my-8 border-brand" />
 
-    <h2 class="text-brand mb-4 text-xl">
+    <h2 class="mb-4 text-xl text-brand">
       Наша Компания заинтересована в талантливых, ответственных и способных работать в команде
       сотрудников!
     </h2>
@@ -66,7 +66,7 @@
         data={image} />
     </div>
 
-    <hr class="border-brand my-8" />
+    <hr class="my-8 border-brand" />
 
     <h2 class="mb-8 text-center">Открытые вакансии на данный момент:</h2>
 
@@ -99,16 +99,16 @@
 
   <a
     class="
-      button hover:border-brand
-      group
-      mx-auto rounded-md border border-slate-500
-      bg-slate-300 text-xl
-      uppercase dark:bg-slate-600"
+      group button
+      mx-auto
+      rounded-md border border-slate-500 bg-slate-300
+      text-xl uppercase
+      hover:border-brand dark:bg-slate-600"
     href="mailto:{email}?subject=заявка о приёме на работу"
     target="_blank"
     itemprop="email">
     <Icon
-      class="group-hover:text-brand mr-4 h-8 w-8 text-sky-700 dark:text-sky-600"
+      class="mr-4 h-8 w-8 text-sky-700 group-hover:text-brand dark:text-sky-600"
       icon="ic:round-mail-outline" />
     Отправить заявку
   </a>

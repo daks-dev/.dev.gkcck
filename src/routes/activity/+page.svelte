@@ -20,12 +20,12 @@
   {description} />
 
 <main itemprop="mainContentOfPage">
-  <header class="content">
+  <header class="wrapper-lg">
     <h1 class="title">Направления деятельности</h1>
   </header>
 
   {#if activity?.links?.length}
-    <div class="content mb-12">
+    <div class="mb-12 wrapper-lg">
       <div
         class="
           mx-auto grid w-fit
@@ -37,7 +37,7 @@
             <h4
               slot="title"
               class="
-                text-accent group-hover:text-brand transition-easy
+                transition-easy text-accent group-hover:text-brand
                 group-hover:drop-shadow-md">
               {@html label}
             </h4>
@@ -49,9 +49,9 @@
 
   <ProjectsCarousel
     class="
-      content
-      overflow-hidden rounded-md
-      drop-shadow-md hover:drop-shadow-none"
+      overflow-hidden
+      rounded-md drop-shadow-md
+      wrapper-lg hover:drop-shadow-none"
     custom={{
       progress: 'top-0'
     }}

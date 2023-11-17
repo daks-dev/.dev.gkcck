@@ -22,13 +22,13 @@
 <main itemprop="mainContentOfPage">
   <header
     class="
-      content
-      flex items-start gap-2 lg:gap-4">
+      flex
+      items-start gap-2 wrapper-lg lg:gap-4">
     <h1 class="title">{name}</h1>
-    <small class="text-accent font-semibold">({id})</small>
+    <small class="font-semibold text-accent">({id})</small>
   </header>
 
-  <div class="content -sm:flex-col flex gap-8">
+  <div class="flex gap-8 wrapper-lg -sm:flex-col">
     <Figure
       class="shrink-0"
       custom={{ image: 'border border-slate-400 drop-shadow' }}
@@ -70,7 +70,7 @@
   </div>
 
   {#if projects.length}
-    <hr class="content my-8" />
+    <hr class="my-8 wrapper-lg" />
     <ProjectsList
       {projects}
       zoom={zoom || undefined}

@@ -13,7 +13,7 @@
 <article
   itemprop="mainContentOfPage"
   role="main">
-  <header class="content">
+  <header class="wrapper-lg">
     <h1
       class="title"
       itemprop="name">
@@ -21,7 +21,7 @@
     </h1>
   </header>
 
-  <div class="content readable">
+  <div class="readable wrapper-lg">
     <h3 class="mb-4">Согласие на обработку персональных данных</h3>
 
     <p>

@@ -50,16 +50,16 @@
   itemprop="mainContentOfPage">
   <header
     class="
-      content mb-0
-      flex items-start gap-2 lg:gap-4">
+      mb-0 flex
+      items-start gap-2 wrapper-lg lg:gap-4">
     <h1 class="title">{name}</h1>
-    <small class="text-accent font-semibold">({id})</small>
+    <small class="font-semibold text-accent">({id})</small>
   </header>
 
   <div
     class="
-      content
-      -md:flex-col flex justify-between gap-8">
+      flex
+      justify-between gap-8 wrapper-lg -md:flex-col">
     <Data
       {project}
       {customer} />
@@ -71,13 +71,13 @@
 
   <div
     class="
-      content xs:h-[35vmax] flex
-      h-[40vmax] grow sm:h-[30vmax] md:h-[25vmax] lg:h-auto">
+      flex h-[40vmax] grow
+      wrapper-lg xs:h-[35vmax] sm:h-[30vmax] md:h-[25vmax] lg:h-auto">
     <YandexMap
       class="
-        bg-waiting bg-25% sm:bg-20%
-        md:bg-10% min-h-full w-full overflow-hidden border-4 border-slate-400 bg-gray-100 bg-center
-        bg-no-repeat dark:bg-slate-200"
+        min-h-full w-full overflow-hidden
+        border-4 border-slate-400 bg-gray-100 bg-waiting bg-25% bg-center bg-no-repeat dark:bg-slate-200
+        sm:bg-20% md:bg-10%"
       data={geodata} />
   </div>
 </main>

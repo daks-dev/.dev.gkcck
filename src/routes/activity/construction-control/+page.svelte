@@ -20,14 +20,14 @@
   {description} />
 
 <main itemprop="mainContentOfPage">
-  <header class="content">
+  <header class="wrapper-lg">
     <h1 class="title">Строительный контроль</h1>
   </header>
 
-  <div class="content space-y-8">
+  <div class="space-y-8 wrapper-lg">
     <ImagePlaceholder />
-    <div class="-md:flex-col flex gap-8">
-      <div class="-md:order-1 flex grow flex-col justify-center gap-16">
+    <div class="flex gap-8 -md:flex-col">
+      <div class="flex grow flex-col justify-center gap-16 -md:order-1">
         <TextPlaceholder class="w-full" />
         <TestimonialPlaceholder class="mx-auto w-full max-w-sm" />
       </div>

@@ -11,19 +11,19 @@
     content="Ошибка в работе приложения" />
 </svelte:head>
 
-<main class="content grow justify-center">
+<main class="grow justify-center wrapper-lg">
   {#if online}
     <h1
       class="
-        font-mono font-bold text-[35vh] leading-none
+        font-mono text-[35vh] font-bold leading-none
         text-slate-500 dark:text-slate-500">
       {$page.status}
     </h1>
 
     <div
       class="
-        px-12 py-8
-        text-xl bg-rose-600 text-gray-200 rounded">
+        rounded bg-rose-600
+        px-12 py-8 text-xl text-gray-200">
       {#if $page.error?.message}
         {$page.error.message}
       {:else}

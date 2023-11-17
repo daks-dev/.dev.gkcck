@@ -16,11 +16,11 @@
   {description} />
 
 <main itemprop="mainContentOfPage">
-  <header class="content">
+  <header class="wrapper-lg">
     <h1 class="title">Допуски и сертификаты</h1>
   </header>
 
-  <div class="content readable text-justify">
+  <div class="readable text-justify wrapper-lg">
     <p>
       <strong>ГК&nbsp;ССК </strong>аккредитована в нескольких строительных, проектном, а также
       изыскательном СРО с уровнем ответственности, достаточным для работы на уникальных и особо
@@ -42,8 +42,8 @@
       учебных программ для обучения молодых специалистов
       <em
         class="
-      lg:ga-4 xs:text-lg
-      mt-2 flex w-full justify-center gap-1 not-italic
+      lg:ga-4 mt-2
+      flex w-full justify-center gap-1 not-italic xs:text-lg
       sm:gap-2 sm:text-xl sm:tracking-wider lg:tracking-widest 2xl:gap-8">
         <span class="first-letter:text-brand">Современным</span>
         <span class="first-letter:text-brand">Стандартам</span>
@@ -51,10 +51,10 @@
       </em>
     </p>
 
-    <hr class="border-brand my-7" />
+    <hr class="my-7 border-brand" />
   </div>
 
-  <section class="content readable">
+  <section class="readable wrapper-lg">
     <h1 class="mb-4 text-center uppercase">Допуски СРО</h1>
 
     <div class="grid items-center gap-5 sm:grid-cols-[240px_minmax(0,_1fr)]">
@@ -62,8 +62,8 @@
       <img
         class="
           lazy
-          bg-1/5 bg-loading
-          rounded border bg-white bg-center bg-no-repeat drop-shadow-md"
+          bg-1/5 rounded
+          border bg-white bg-loading bg-center bg-no-repeat drop-shadow-md"
         src={placeholder}
         data-src={images[0].src}
         width={images[0].width}
@@ -78,8 +78,8 @@
       <img
         class="
           lazy
-          bg-1/5 bg-loading
-          rounded border bg-white bg-center bg-no-repeat drop-shadow-md"
+          bg-1/5 rounded
+          border bg-white bg-loading bg-center bg-no-repeat drop-shadow-md"
         src={placeholder}
         data-src={images[1].src}
         width={images[1].width}
@@ -96,8 +96,8 @@
       <img
         class="
           lazy
-          bg-1/5 bg-loading
-          rounded border bg-white bg-center bg-no-repeat drop-shadow-md"
+          bg-1/5 rounded
+          border bg-white bg-loading bg-center bg-no-repeat drop-shadow-md"
         src={placeholder}
         data-src={images[2].src}
         width={images[2].width}
@@ -114,8 +114,8 @@
       <img
         class="
           lazy
-          bg-1/5 bg-loading
-          rounded border bg-white bg-center bg-no-repeat drop-shadow-md"
+          bg-1/5 rounded
+          border bg-white bg-loading bg-center bg-no-repeat drop-shadow-md"
         src={placeholder}
         data-src={images[3].src}
         width={images[3].width}
@@ -130,10 +130,10 @@
       </p>
     </div>
 
-    <hr class="border-brand my-7" />
+    <hr class="my-7 border-brand" />
   </section>
 
-  <section class="content readable">
+  <section class="readable wrapper-lg">
     <h1 class="mb-4 text-center uppercase">Сертификаты и лицензии</h1>
 
     <h4 class="mb-2">
@@ -190,13 +190,13 @@
       </li>
     </ul>
 
-    <hr class="border-brand my-7" />
+    <hr class="my-7 border-brand" />
   </section>
 
-  <section class="content readable">
+  <section class="readable wrapper-lg">
     <h1 class="mb-4 text-center uppercase">Аккредитации</h1>
 
-    <div class="-md:flex-wrap flex justify-around gap-8">
+    <div class="flex justify-around gap-8 -md:flex-wrap">
       <div>
         <h4 class="mb-2">
           Свидетельство
@@ -225,10 +225,10 @@
       </div>
     </div>
 
-    <hr class="border-brand my-7" />
+    <hr class="my-7 border-brand" />
   </section>
 
-  <section class="content readable">
+  <section class="readable wrapper-lg">
     <h1 class="mb-4 text-center uppercase">Учебный центр</h1>
 
     <ul class="lg:text-lg">
@@ -248,10 +248,10 @@
       </li>
     </ul>
 
-    <hr class="border-brand my-7" />
+    <hr class="my-7 border-brand" />
   </section>
 
-  <section class="content readable">
+  <section class="readable wrapper-lg">
     <h1 class="mb-4 text-center uppercase">Работа с НИУ МГСУ</h1>
 
     <p class="text-justify">

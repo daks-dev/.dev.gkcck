@@ -18,11 +18,11 @@
   {description} />
 
 <main itemprop="mainContentOfPage">
-  <header class="content">
+  <header class="wrapper-lg">
     <h1 class="title">Партнёры</h1>
   </header>
 
-  <div class="wrapper flex flex-wrap justify-center gap-2">
+  <div class="flex flex-wrap justify-center gap-2 wrapper-xl">
     {#each partners as { id, projects, hidden, images }}
       {@const data = {
         ...images?.squares[0],
@@ -40,9 +40,9 @@
             class="drop-shadow-md hover:drop-shadow-sm"
             custom={{
               caption: `
-              absolute bottom-1 right-1 py-1 px-2 w-8 h-8
-              flex flex-col justify-center items-center
-              rounded-full text-white bg-black/30
+              absolute bottom-1 right-1 flex h-8 w-8 flex-col
+              items-center justify-center rounded-full bg-black/30
+              px-2 py-1 text-white
               opacity-50 group-hover:opacity-100`
             }}
             {data} />

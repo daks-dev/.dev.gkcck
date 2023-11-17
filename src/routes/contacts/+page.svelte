@@ -57,17 +57,17 @@
 <main
   class="grow gap-8"
   itemprop="mainContentOfPage">
-  <header class="content mb-0">
+  <header class="mb-0 wrapper-lg">
     <h1 class="title">Контакты</h1>
   </header>
 
-  <div class="content flex items-center justify-around gap-8">
+  <div class="flex items-center justify-around gap-8 wrapper-lg">
     <Contacts
       class="h-fit"
       {microdata} />
 
     <LightboxList
-      class="-sm:hidden group relative md:shrink-0"
+      class="group relative -sm:hidden md:shrink-0"
       custom={{ overlay: 'overflow-offset' }}
       options={{ behaviour: 'loop' }}
       loader={() => document?.lazyload.update()}
@@ -101,13 +101,13 @@
 
   <div
     class="
-      content xs:h-[35vmax] flex
-      h-[40vmax] grow sm:h-[30vmax] md:h-[25vmax] lg:h-auto">
+      flex h-[40vmax] grow
+      wrapper-lg xs:h-[35vmax] sm:h-[30vmax] md:h-[25vmax] lg:h-auto">
     <YandexMap
       class="
-        bg-waiting bg-25% sm:bg-20%
-        md:bg-10% min-h-full w-full overflow-hidden border-4 border-slate-400 bg-gray-100 bg-center
-        bg-no-repeat dark:bg-slate-200"
+        min-h-full w-full overflow-hidden
+        border-4 border-slate-400 bg-gray-100 bg-waiting bg-25% bg-center bg-no-repeat dark:bg-slate-200
+        sm:bg-20% md:bg-10%"
       data={dataset} />
   </div>
 </main>

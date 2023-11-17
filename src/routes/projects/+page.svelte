@@ -15,7 +15,7 @@
   {description} />
 
 <main itemprop="mainContentOfPage">
-  <header class="content mb-3">
+  <header class="mb-3 wrapper-lg">
     <h1 class="title">Проекты</h1>
   </header>
 

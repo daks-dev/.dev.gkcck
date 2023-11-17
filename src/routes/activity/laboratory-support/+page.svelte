@@ -10,12 +10,12 @@
   {description} />
 
 <main itemprop="mainContentOfPage">
-  <header class="content">
+  <header class="wrapper-lg">
     <h1 class="title">Лабораторное сопровождение</h1>
   </header>
 
-  <div class="content readable">
-    <ul class="pseudo before:text-brand mb-8 lg:text-lg">
+  <div class="readable wrapper-lg">
+    <ul class="pseudo mb-8 before:text-brand lg:text-lg">
       <li>
         Лабораторный контроль качества строительно-монтажных материалов в том числе сварочных работ.
       </li>
@@ -30,8 +30,8 @@
     <table
       class="
         table--custom
-        text-2xs
-        xs:text-xs border-collapse sm:text-sm md:text-base">
+        border-collapse
+        text-2xs xs:text-xs sm:text-sm md:text-base">
       <thead class="bg-gray-300 font-semibold dark:bg-gray-600/50">
         <tr>
           <th>№ п/п</th>

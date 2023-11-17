@@ -44,8 +44,8 @@
     <!--
       flex flex-wrap justify-around gap-y-8 gap-x-16
     -->
-    <section class="wrapper pt-12 lg:pt-16">
-      <h2 class="text-brand mb-8">Направления деятельности</h2>
+    <section class="pt-12 wrapper-xl lg:pt-16">
+      <h2 class="mb-8 text-brand">Направления деятельности</h2>
       <div
         class="
           mx-auto grid w-fit
@@ -57,7 +57,7 @@
             <h4
               slot="title"
               class="
-                text-accent group-hover:text-brand transition-easy
+                transition-easy text-accent group-hover:text-brand
                 group-hover:drop-shadow-md">
               {@html label}
             </h4>
@@ -69,22 +69,22 @@
 
   <YandexMap
     class="
-      3xl:top-[7vh] 3xl:right-[20vw]
-      lg:aspect-4/3 lg:drop-shadow-brand bg-waiting bg-20% mx-auto
-      mt-16 hidden aspect-video w-full max-w-xl overflow-hidden border-4
-      border-slate-400 bg-slate-200/75
-      bg-center bg-no-repeat
-      transition
-      duration-500 ease-in-out sm:block lg:absolute lg:right-[7vw]
-      lg:top-[3vh] lg:max-w-md
-      lg:rounded-lg lg:border
-      lg:hover:drop-shadow-md xl:right-[10vw] xl:top-[5vh]"
+      mx-auto mt-16
+      hidden aspect-video w-full max-w-xl overflow-hidden
+      border-4 border-slate-400 bg-slate-200/75 bg-waiting bg-20% bg-center bg-no-repeat
+      transition duration-500
+      ease-in-out sm:block
+      lg:absolute
+      lg:right-[7vw] lg:top-[3vh] lg:aspect-4/3 lg:max-w-md lg:rounded-lg
+      lg:border lg:drop-shadow-brand
+      lg:hover:drop-shadow-md xl:right-[10vw]
+      xl:top-[5vh] 3xl:right-[20vw] 3xl:top-[7vh]"
     {projects}
     scaled />
 
-  <section class="wrapper pt-12 lg:pt-16">
-    <h2 class="text-brand mb-8">О нас</h2>
-    <div class="-md:flex-wrap flex justify-center gap-8">
+  <section class="pt-12 wrapper-xl lg:pt-16">
+    <h2 class="mb-8 text-brand">О нас</h2>
+    <div class="flex justify-center gap-8 -md:flex-wrap">
       <a
         class="
           group relative

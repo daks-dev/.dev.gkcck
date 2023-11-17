@@ -10,11 +10,11 @@
   {description} />
 
 <main itemprop="mainContentOfPage">
-  <header class="content">
+  <header class="wrapper-lg">
     <h1 class="title">Проектирование</h1>
   </header>
 
-  <div class="content readable text-justify">
+  <div class="readable text-justify wrapper-lg">
     <p>
       <em>Проектное направление</em> развивается в <strong>ГК&nbsp;ССК</strong> более 8 лет, и за это
       время пройден серьезный путь от разработки небольших объектов до участия в крупных городских программах
@@ -39,8 +39,8 @@
       и другим требованиям
       <em
         class="
-        lg:ga-4 xs:text-lg
-        mt-2 flex w-full justify-center gap-1 not-italic
+        lg:ga-4 mt-2
+        flex w-full justify-center gap-1 not-italic xs:text-lg
         sm:gap-2 sm:text-xl sm:tracking-wider lg:tracking-widest 2xl:gap-8">
         <span class="first-letter:text-brand">Современных</span>
         <span class="first-letter:text-brand">Стандартов</span>
@@ -48,6 +48,6 @@
       </em>
     </p>
 
-    <hr class="border-brand my-7" />
+    <hr class="my-7 border-brand" />
   </div>
 </main>

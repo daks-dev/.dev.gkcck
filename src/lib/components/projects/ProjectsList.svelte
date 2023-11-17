@@ -36,8 +36,8 @@
 
 <div
   class="
-    content mb-4 flex
-    items-center gap-4 overflow-hidden">
+    mb-4 flex items-center
+    gap-4 overflow-hidden wrapper-lg">
   <span class="mr-auto p-1.5">[{projects.length}]</span>
   <button
     on:click={() => (mode = 0)}
@@ -83,8 +83,8 @@
     in:blur={transition.in}
     out:fade={transition.out}
     class="
-      wrapper
-      flex flex-wrap justify-center gap-8">
+      flex
+      flex-wrap justify-center gap-8 wrapper-xl">
     {#each projects as { id, name, address, images }}
       {@const idx = random(images?.squares)}
       {@const data = { ...images?.squares[idx], title: name, description: address }}
@@ -103,13 +103,13 @@
             border-slate-400
             group-hover:drop-shadow-md"
           custom={{
-            image: grayscale ? 'grayscale group-hover:grayscale-0 transition-easy' : undefined,
+            image: grayscale ? 'transition-easy grayscale group-hover:grayscale-0' : undefined,
             caption: `
-              absolute bottom-0 left-0 w-full p-2 h-20 overflow-hidden
-              flex flex-col justify-start
-              text-ellipsis text-white bg-gray-700/70
-              group-hover:opacity-0
-              transition-opacity duration-1000 ease-in-out`
+              absolute bottom-0 left-0 flex h-20 w-full flex-col
+              justify-start overflow-hidden text-ellipsis
+              bg-gray-700/70 p-2 text-white
+              transition-opacity
+              duration-1000 ease-in-out group-hover:opacity-0`
           }}
           {data} />
         {#if idx >= 0}
@@ -130,8 +130,8 @@
     in:blur={transition.in}
     out:fade={transition.out}
     class="
-      content
-      flex flex-col">
+      flex
+      flex-col wrapper-lg">
     {#each projects as { id, name, address, area, area_unit }, idx}
       <a
         class="
@@ -142,12 +142,12 @@
         href={`/projects/${id.toString().padStart(3, '0')}`}>
         <small>{idx + 1}</small>
         <span
-          class="-xs:col-span-2
-            text-cyan-700 group-hover:text-sky-700 dark:text-cyan-600">
+          class="text-cyan-700
+            group-hover:text-sky-700 dark:text-cyan-600 -xs:col-span-2">
           {name}
         </span>
         <small class="-md:hidden">{address}</small>
-        <span class="-xs:hidden text-right">
+        <span class="text-right -xs:hidden">
           {Number(area).toLocaleString()}
           {@html area_unit || 'м<sup>2</sup>'}
         </span>
@@ -155,12 +155,12 @@
     {/each}
   </div>
 {:else}
-  <div class="wrapper hidden sm:block">
+  <div class="hidden wrapper-xl sm:block">
     <YandexMap
       class="
-        bg-waiting bg-25% sm:bg-20%
-        md:bg-10% aspect-square w-full border-4 border-slate-400 bg-gray-100 bg-center bg-no-repeat
-        dark:bg-slate-200 lg:aspect-video"
+        aspect-square w-full border-4
+        border-slate-400 bg-gray-100 bg-waiting bg-25% bg-center bg-no-repeat dark:bg-slate-200 sm:bg-20%
+        md:bg-10% lg:aspect-video"
       {projects}
       {center}
       {zoom} />
