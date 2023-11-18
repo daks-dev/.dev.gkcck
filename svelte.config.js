@@ -4,6 +4,7 @@ import { dirname, resolve } from 'node:path';
 import adapterNode from '@sveltejs/adapter-node';
 import adapterStatic from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/kit/vite';
+import { mdsvex } from 'mdsvex';
 
 import 'dotenv/config';
 
@@ -18,7 +19,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  preprocess: vitePreprocess(),
+  extensions: ['.svelte', '.svx', '.md'],
+
+  preprocess: [mdsvex({ extensions: ['.svx', '.md'] }), vitePreprocess()],
 
   vitePlugin: {
     inspector: {

@@ -49,6 +49,10 @@ const config: NavSite = {
         label: 'Партнеры'
       },
       {
+        href: '/news',
+        label: 'Новости'
+      },
+      {
         href: '/contacts',
         label: 'Контакты'
       }
