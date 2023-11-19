@@ -8,7 +8,7 @@
   export let href: undefined | string = undefined;
 
   export let size: number | string = '4em';
-  export let animate = ''; // 'animate-pulse hover:animation-paused';
+  export let animate = ''; // 'animate-pulse oversee:animation-paused';
 </script>
 
 <svelte:element
@@ -30,29 +30,29 @@
     <slot>
       <div class="text-slate-500">
         Объектов реализовано:
-        <span class="text-brand text-2xl">...</span>
+        <span class="text-2xl text-brand">...</span>
       </div>
       <div class="text-slate-500">
         Объекты в работе:
-        <span class="text-brand text-2xl">...</span>
+        <span class="text-2xl text-brand">...</span>
       </div>
     </slot>
   </div>
   <div class="flex items-start gap-5 text-slate-500">
     <Icon
       class="
-        drop-shadow-deep transition-easy
-        group-hover:drop-shadow-md"
+        transition-easy drop-shadow-lg
+        group-oversee:drop-shadow-md"
       icon="ic:round-account-circle"
       {size} />
     <div class="flex grow flex-col gap-3 opacity-75">
       <small>руководитель направления:</small>
       <div
         class="
-          drop-shadow-deep transition-easy flex grow
-          flex-col
-          gap-2 opacity-75
-          group-hover:drop-shadow-none">
+          transition-easy flex grow flex-col
+          gap-2
+          opacity-75 drop-shadow-lg
+          group-oversee:drop-shadow-none">
         <div class="h-2.5 w-3/4 rounded-full bg-current" />
         <div class="h-2 w-full rounded-full bg-current" />
       </div>

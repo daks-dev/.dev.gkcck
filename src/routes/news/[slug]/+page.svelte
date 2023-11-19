@@ -12,7 +12,7 @@
 </script>
 
 <YandexMetrikaHit
-  {title}
+  title="{title} | ГК ССК • Новости"
   {description} />
 
 <main itemprop="mainContentOfPage">
@@ -36,7 +36,7 @@
           alt="" />
       {/each}
     </div>
-    <div class="content grow">
+    <div class="content grow text-justify">
       <svelte:component this={content} />
     </div>
   </div>

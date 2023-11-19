@@ -37,13 +37,13 @@
             link
             light />
           <Figure
-            class="drop-shadow-md hover:drop-shadow-sm"
+            class="drop-shadow-md oversee:drop-shadow-sm"
             custom={{
               caption: `
               absolute bottom-1 right-1 flex h-8 w-8 flex-col
               items-center justify-center rounded-full bg-black/30
               px-2 py-1 text-white
-              opacity-50 group-hover:opacity-100`
+              opacity-50 group-oversee:opacity-100`
             }}
             {data} />
         </a>

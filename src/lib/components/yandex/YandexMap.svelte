@@ -63,7 +63,7 @@
 
   const footer = (el: Project) => {
     const href = `href="/projects/${el.id.toString().padStart(3, '0')}"`;
-    return `<a class="block w-full -mt-0.5 py-0.5 text-sky-700 hover:text-brand" ${href}">подробнее...</a>`;
+    return `<a class="block w-full -mt-0.5 py-0.5 text-sky-700 oversee:text-brand" ${href}">подробнее...</a>`;
   };
 
   const data = {
@@ -114,8 +114,8 @@
       bind:map
       class={twMerge(
         'ymaps--left-copyright h-full w-full'
-        // grayscale && 'grayscale hover:grayscale-0'
-        // sepia && 'sepia hover:sepia-0'
+        // grayscale && 'grayscale oversee:grayscale-0'
+        // sepia && 'sepia oversee:sepia-0'
       )}
       {data} />
   </svelte:element>

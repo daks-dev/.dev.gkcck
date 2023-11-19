@@ -29,10 +29,10 @@
             class="flex flex-col items-center"
             custom={{
               image: `
-              rounded drop-shadow-deep
-              hover:drop-shadow-hard hover:scale-105
-              transition duration-500 ease-in-out`,
-              caption: 'flex flex-col mt-2 pt-2'
+              rounded drop-shadow-lg
+              transition duration-500
+              oversee:scale-105 oversee:drop-shadow-xl`,
+              caption: 'mt-2 flex flex-col pt-2'
             }}
             {data} />
         </LightboxThumbnail>
@@ -45,7 +45,7 @@
         href={thumbnails[idx].src} />
     {/each}
     {#if sources.length > 1}
-      <span class="text-accent whitespace-nowrap text-lg font-semibold md:self-start">
+      <span class="whitespace-nowrap text-lg font-semibold text-accent md:self-start">
         [ +{sources.length - 1} ]
       </span>
     {/if}

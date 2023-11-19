@@ -52,13 +52,13 @@
           max-w-full grid-cols-none gap-8 md:grid-cols-2 lg:gap-x-16 2xl:gap-x-32">
         {#each activity.links as { href, label }}
           <ActivityCard
-            class="w-full hover:bg-slate-300/20"
+            class="w-full oversee:bg-slate-300/20"
             href="/activity{href}">
             <h4
               slot="title"
               class="
-                transition-easy text-accent group-hover:text-brand
-                group-hover:drop-shadow-md">
+                transition-easy text-accent group-oversee:text-brand
+                group-oversee:drop-shadow-md">
               {@html label}
             </h4>
           </ActivityCard>
@@ -68,17 +68,19 @@
   {/if}
 
   <YandexMap
-    class="
-      mx-auto mt-16
-      hidden aspect-video w-full max-w-xl overflow-hidden
-      border-4 border-slate-400 bg-slate-200/75 bg-waiting bg-20% bg-center bg-no-repeat
-      transition duration-500
-      ease-in-out sm:block
-      lg:absolute
-      lg:right-[7vw] lg:top-[3vh] lg:aspect-4/3 lg:max-w-md lg:rounded-lg
-      lg:border lg:drop-shadow-brand
-      lg:hover:drop-shadow-md xl:right-[10vw]
-      xl:top-[5vh] 3xl:right-[20vw] 3xl:top-[7vh]"
+    class={[
+      'hidden',
+      'mx-auto mt-16 aspect-video w-full max-w-xl overflow-hidden',
+      'bg-neutral-300 bg-waiting bg-20% bg-center bg-no-repeat',
+      'border-4 border-slate-400',
+      'transition duration-500',
+      'sm:block',
+      'lg:absolute',
+      'lg:right-[7vw] lg:top-[3vh] lg:aspect-4/3 lg:max-w-md lg:rounded-lg',
+      'lg:border lg:drop-shadow-brand',
+      'lg:oversee:drop-shadow-md xl:right-[10vw]',
+      'xl:top-[5vh] 3xl:right-[20vw] 3xl:top-[7vh]'
+    ]}
     {projects}
     scaled />
 
@@ -90,7 +92,7 @@
           group relative
           order-1 h-fit w-80
           shrink-0 drop-shadow-md
-          hover:drop-shadow-sm md:order-none"
+          oversee:drop-shadow-sm md:order-none"
         href="/partners">
         <Sign
           class="left-2 top-2"

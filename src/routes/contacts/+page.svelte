@@ -81,10 +81,10 @@
             dark />
           <img
             class="
-            hover:drop-shadow-deep
-            transition-easy mx-3
-            rounded-md drop-shadow-md
-            hover:scale-105"
+            transition-easy
+            mx-3 rounded-md
+            drop-shadow-md transition-transform
+            duration-300 oversee:scale-105 oversee:drop-shadow-lg"
             {...thumbnail}
             alt="" />
         </LightboxThumbnail>

@@ -71,7 +71,7 @@
     <a
       class="
         group relative
-        w-fit drop-shadow-md hover:drop-shadow-sm"
+        w-fit drop-shadow-md oversee:drop-shadow-sm"
       href="/partners/{customer.id.toString().padStart(3, '0')}">
       <Sign
         class="left-full top-0 ml-1"
@@ -79,7 +79,7 @@
         small />
       <Figure
         class="hidden md:flex"
-        custom={{ image: 'border border-slate-400 drop-shadow w-auto max-h-44' }}
+        custom={{ image: 'max-h-44 w-auto border border-slate-400 drop-shadow' }}
         data={customer.images?.sources[0]} />
       <h2 class="font-semibold text-slate-500 md:hidden">
         {customer.name}
@@ -87,7 +87,7 @@
     </a>
   {:else}
     <img
-      class="drop-shadow-deep mr-auto h-20 w-auto sm:h-24 md:h-28"
+      class="mr-auto h-20 w-auto drop-shadow-lg sm:h-24 md:h-28"
       src={logo}
       alt="" />
   {/if}

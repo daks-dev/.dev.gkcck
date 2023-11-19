@@ -6,8 +6,8 @@
   export let data: PageData;
   const { items } = data;
 
-  const title = 'СКМ • Новости';
-  const description = 'Новости предприятия СКМ';
+  const title = 'ГК ССК • Новости';
+  const description = 'Новости группы компаний «ССК»';
 
   // const random = (x?: unknown[]): number => (x?.length ? Math.floor(Math.random() * x.length) : -1);
 
@@ -36,7 +36,7 @@
           custom={{
             image: [
               'mb-2 aspect-video w-48 lg:w-auto',
-              'rounded-md bg-neutral-500/10 group-hover:scale-105',
+              'rounded-md bg-neutral-500/10 group-oversee:scale-105',
               'transition-transform duration-300'
             ]
           }}

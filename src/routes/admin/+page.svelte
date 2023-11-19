@@ -52,8 +52,8 @@
     <a
       rel="noreferrer nofollow"
       class="
-        hover:drop-shadow-deep
-        transition-easy relative w-24 drop-shadow-md hover:scale-105
+        transition-easy
+        relative w-24 drop-shadow-md oversee:scale-105 oversee:drop-shadow-lg
         sm:w-32"
       href="https://github.com/daks-dev/daks-gkcck"
       target="_blank">

@@ -57,18 +57,18 @@
 
   <img
     class="
-        3xl:left-[7vw] drop-shadow-deep absolute left-[4vw] top-[4vh] h-[15vh]
-        lg:left-[7vw] lg:h-[12.5vh]
-        2xl:left-[12vw]"
+        absolute left-[4vw] top-[4vh] h-[15vh] drop-shadow-lg lg:left-[7vw]
+        lg:h-[12.5vh] 2xl:left-[12vw]
+        3xl:left-[7vw]"
     src={logo}
     alt=""
     itemprop="logo" />
 
   <div
     class="
-        xs:hidden
-        flex w-full
-        flex-row items-center justify-center gap-8 pt-[33vh]">
+        flex
+        w-full flex-row
+        items-center justify-center gap-8 pt-[33vh] xs:hidden">
     <a
       class={button}
       href="tel://{telephone.replace(/[\s-()]/g, '')}"
@@ -95,11 +95,11 @@
 
   <h1
     class="
-        text-shadow--home xs:text-5xl absolute bottom-[10vh]
-        left-[7vw] flex flex-col
-        gap-4 text-4xl font-black
-        tracking-wider text-gray-700
-        dark:text-neutral-300 sm:text-6xl lg:text-7xl xl:left-[12vw]">
+        text-shadow--home absolute bottom-[10vh] left-[7vw]
+        flex flex-col gap-4
+        text-4xl font-black tracking-wider
+        text-gray-700 dark:text-neutral-300
+        xs:text-5xl sm:text-6xl lg:text-7xl xl:left-[12vw]">
     <span class="first-letter:text-brand">Современные</span>
     <span class="first-letter:text-brand">Стандарты</span>
     <span class="first-letter:text-brand">Качества</span>
@@ -107,12 +107,12 @@
 
   <a
     class="
-      3xl:right-[7vw] drop-shadow-deep transition-easy absolute
-      bottom-[10vh] right-[7vw] hidden items-center gap-1
-      font-mono text-3xl font-black
-      tracking-tighter text-slate-600 dark:text-neutral-400
-      md:flex
-      2xl:right-[12vw]"
+      transition-easy absolute bottom-[10vh] right-[7vw]
+      hidden items-center gap-1 font-mono text-3xl
+      font-black tracking-tighter text-slate-600
+      drop-shadow-lg dark:text-neutral-400 md:flex
+      2xl:right-[12vw]
+      3xl:right-[7vw]"
     href="tel://{telephone.replace(/[\s-()]/g, '')}"
     itemprop="telephone">
     <span>{tel.substring(0, 7)}</span>
@@ -123,8 +123,8 @@
     <button
       on:click={handlePoster}
       class="
-        drop-shadow-deep absolute bottom-[4vh] right-[4vw] opacity-50
-        transition duration-300 hover:opacity-100
+        absolute bottom-[4vh] right-[4vw] opacity-50 drop-shadow-lg
+        transition duration-300 oversee:opacity-100
         lg:right-[3vw] 2xl:right-[2vw]"
       class:rotate-45={!poster}
       type="button"

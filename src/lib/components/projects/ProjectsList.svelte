@@ -43,8 +43,8 @@
     on:click={() => (mode = 0)}
     class="
       rounded p-1.5
-      hover:bg-gray-300 disabled:text-cyan-600
-      dark:hover:bg-gray-700 dark:disabled:text-cyan-700"
+      disabled:text-cyan-600 oversee:bg-gray-300
+      dark:disabled:text-cyan-700 dark:oversee:bg-gray-700"
     type="button"
     disabled={!mode || undefined}>
     <Icon
@@ -55,8 +55,8 @@
     on:click={() => (mode = 1)}
     class="
       rounded p-1.5
-      hover:bg-gray-300 disabled:text-cyan-600
-      dark:hover:bg-gray-700 dark:disabled:text-cyan-700"
+      disabled:text-cyan-600 oversee:bg-gray-300
+      dark:disabled:text-cyan-700 dark:oversee:bg-gray-700"
     type="button"
     disabled={mode === 1 || undefined}>
     <Icon
@@ -67,9 +67,9 @@
     on:click={() => (mode = 2)}
     class="
       hidden rounded
-      p-1.5 hover:bg-gray-300
-      disabled:text-cyan-600 dark:hover:bg-gray-700
-      dark:disabled:text-cyan-700 sm:block"
+      p-1.5 disabled:text-cyan-600
+      oversee:bg-gray-300 dark:disabled:text-cyan-700
+      dark:oversee:bg-gray-700 sm:block"
     type="button"
     disabled={mode === 2 || undefined}>
     <Icon
@@ -97,19 +97,19 @@
           dark />
         <Figure
           class="
-            drop-shadow-deep
-            transition-easy pointer-events-none overflow-hidden
-            rounded border
-            border-slate-400
-            group-hover:drop-shadow-md"
+            transition-easy
+            pointer-events-none overflow-hidden rounded
+            border border-slate-400
+            drop-shadow-lg
+            group-oversee:drop-shadow-md"
           custom={{
-            image: grayscale ? 'transition-easy grayscale group-hover:grayscale-0' : undefined,
+            image: grayscale ? 'transition-easy grayscale group-oversee:grayscale-0' : undefined,
             caption: `
               absolute bottom-0 left-0 flex h-20 w-full flex-col
               justify-start overflow-hidden text-ellipsis
               bg-gray-700/70 p-2 text-white
               transition-opacity
-              duration-1000 ease-in-out group-hover:opacity-0`
+              duration-1000 ease-in-out group-oversee:opacity-0`
           }}
           {data} />
         {#if idx >= 0}
@@ -137,13 +137,13 @@
         class="
           group grid grid-cols-[32px_minmax(0,_1fr)_96px]
           items-center px-2 py-4 odd:bg-slate-400/25
-          hover:bg-slate-400 hover:drop-shadow-md
-          dark:even:bg-slate-700/25 dark:hover:bg-slate-700 md:grid-cols-[32px_256px_minmax(0,_1fr)_96px]"
+          oversee:bg-slate-400 oversee:drop-shadow-md
+          dark:even:bg-slate-700/25 dark:oversee:bg-slate-700 md:grid-cols-[32px_256px_minmax(0,_1fr)_96px]"
         href={`/projects/${id.toString().padStart(3, '0')}`}>
         <small>{idx + 1}</small>
         <span
           class="text-cyan-700
-            group-hover:text-sky-700 dark:text-cyan-600 -xs:col-span-2">
+            group-oversee:text-sky-700 dark:text-cyan-600 -xs:col-span-2">
           {name}
         </span>
         <small class="-md:hidden">{address}</small>

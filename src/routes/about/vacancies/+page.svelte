@@ -103,12 +103,12 @@
       mx-auto
       rounded-md border border-slate-500 bg-slate-300
       text-xl uppercase
-      hover:border-brand dark:bg-slate-600"
+      oversee:border-brand dark:bg-slate-600"
     href="mailto:{email}?subject=заявка о приёме на работу"
     target="_blank"
     itemprop="email">
     <Icon
-      class="mr-4 h-8 w-8 text-sky-700 group-hover:text-brand dark:text-sky-600"
+      class="mr-4 h-8 w-8 text-sky-700 group-oversee:text-brand dark:text-sky-600"
       icon="ic:round-mail-outline" />
     Отправить заявку
   </a>
