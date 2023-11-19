@@ -36,7 +36,7 @@
           alt="" />
       {/each}
     </div>
-    <div class="content grow text-justify">
+    <div class="content grow text-justify leading-relaxed bp:text-lg/relaxed">
       <svelte:component this={content} />
     </div>
   </div>
