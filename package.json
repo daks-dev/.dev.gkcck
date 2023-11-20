@@ -1,6 +1,6 @@
 {
   "name": "@daks.dev/.dev.gkcck",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "GkCCK site",
   "private": false,
   "scripts": {
@@ -46,7 +46,7 @@
     "nanostores": "^0.9.5",
     "postcss": "^8.4.31",
     "postcss-import": "^15.1.0",
-    "svelte": "^4.2.6",
+    "svelte": "^4.2.7",
     "svelte-check": "^3.6.0",
     "tailwind-merge": "^1.14.0",
     "tailwindcss": "^3.3.5",
