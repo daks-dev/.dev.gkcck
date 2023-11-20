@@ -52,14 +52,14 @@
           max-w-full grid-cols-none gap-8 md:grid-cols-2 lg:gap-x-16 2xl:gap-x-32">
         {#each activity.links as { href, label }}
           <ActivityCard
-            class="w-full oversee:bg-slate-300/20"
+            class="w-full oversee:bg-slate-500/20 dark:oversee:bg-slate-300/20"
             href="/activity{href}">
             <div
               slot="title"
               class="
-                text-xl
-                transition-easy text-accent group-oversee:text-brand
-                group-oversee:drop-shadow-md">
+                transition-easy
+                text-xl text-accent group-oversee:text-brand
+                group-oversee:drop-shadow-deep">
               {@html label}
             </div>
           </ActivityCard>

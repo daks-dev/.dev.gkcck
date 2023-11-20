@@ -16,7 +16,7 @@
   class={twMerge(
     'group relative p-7 py-4',
     'flex flex-col',
-    'text-slate-700 dark:text-slate-300',
+    'text-slate-600 dark:text-slate-400',
     'rounded border border-current shadow',
     animate,
     className

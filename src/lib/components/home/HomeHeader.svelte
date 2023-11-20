@@ -57,7 +57,7 @@
 
   <img
     class="
-        absolute left-[4vw] top-[4vh] h-[15vh] drop-shadow-lg lg:left-[7vw]
+        absolute left-[4vw] top-[4vh] h-[15vh] drop-shadow-deep lg:left-[7vw]
         lg:h-[12.5vh] 2xl:left-[12vw]
         3xl:left-[7vw]"
     src={logo}
@@ -110,7 +110,7 @@
       transition-easy absolute bottom-[10vh] right-[7vw]
       hidden items-center gap-1 font-mono text-3xl
       font-black tracking-tighter text-slate-600
-      drop-shadow-lg dark:text-neutral-400 md:flex
+      drop-shadow-deep dark:text-neutral-400 md:flex
       2xl:right-[12vw]
       3xl:right-[7vw]"
     href="tel://{telephone.replace(/[\s-()]/g, '')}"
