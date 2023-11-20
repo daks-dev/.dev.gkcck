@@ -18,7 +18,7 @@
     "run:update": "pnpm up"
   },
   "devDependencies": {
-    "@daks.dev/svelte.sdk": "^0.1.4",
+    "@daks.dev/svelte.sdk": "^0.1.5",
     "@iconify/svelte": "^3.1.4",
     "@nanostores/persistent": "^0.9.1",
     "@playwright/test": "^1.40.0",

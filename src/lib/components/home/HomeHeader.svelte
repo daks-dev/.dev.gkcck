@@ -73,22 +73,22 @@
       class={button}
       href="tel://{telephone.replace(/[\s-()]/g, '')}"
       aria-label="telephone"
-      aria-hidden="true"
       itemprop="telephone">
       <span class="sr-only">telephone</span>
       <Icon
         icon="ic:round-phone-in-talk"
+        class="disabled"
         size="4em" />
     </a>
     <a
       class={button}
       href="mailto:{email}"
       aria-label="email"
-      aria-hidden="true"
       itemprop="email">
       <span class="sr-only">email</span>
       <Icon
         icon="ic:round-mail-outline"
+        class="disabled"
         size="4em" />
     </a>
   </div>
@@ -128,8 +128,7 @@
         lg:right-[3vw] 2xl:right-[2vw]"
       class:rotate-45={!poster}
       type="button"
-      aria-label="poster"
-      aria-hidden="true">
+      aria-label="poster">
       <span class="sr-only">poster</span>
       <Icon
         icon="ic:round-close"

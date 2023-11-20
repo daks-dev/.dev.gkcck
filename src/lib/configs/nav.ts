@@ -70,7 +70,8 @@ const config: NavSite = {
       },
       {
         href: '/admin',
-        label: 'ic:outline-settings',
+        label: 'admin panel',
+        icon: 'ic:outline-settings',
         disallow: true
       }
     ]
