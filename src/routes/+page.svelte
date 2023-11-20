@@ -54,13 +54,14 @@
           <ActivityCard
             class="w-full oversee:bg-slate-300/20"
             href="/activity{href}">
-            <h4
+            <div
               slot="title"
               class="
+                text-xl
                 transition-easy text-accent group-oversee:text-brand
                 group-oversee:drop-shadow-md">
               {@html label}
-            </h4>
+            </div>
           </ActivityCard>
         {/each}
       </div>
