@@ -5,7 +5,9 @@ const { id, scope, name, shortName, description, display, backgroundColor, theme
 
 const pkg = JSON.parse(await fs.readFile(resolve(process.cwd(), 'package.json'), 'utf8'));
 
-const pathname = process.env.APP_CANONICAL ? new URL(process.env.APP_CANONICAL).pathname : './';
+const pathname = process.env.PUBLIC_APP_CANONICAL
+  ? new URL(process.env.PUBLIC_APP_CANONICAL).pathname
+  : './';
 
 const any = ['icon.svg', 128, 192, 256, 384, 512];
 const maskable = ['icon.svg', 192, 384, 512];

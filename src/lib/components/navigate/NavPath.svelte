@@ -3,7 +3,7 @@
   import { beforeNavigate, afterNavigate } from '$app/navigation';
   import { Icon, Link } from '@daks.dev/svelte.sdk';
   import { navigate, routeTransitionMode } from '@daks.dev/svelte.sdk/stores';
-  import twMerge from '$lib/assets/tailwindcss';
+  import twMerge from '$lib/tailwind';
 
   let className: ClassName = undefined;
   export { className as class };
@@ -25,8 +25,8 @@
   {#key $navigate}
     <div
       class="
-        xs:flex mr-auto hidden
-        gap-8 lg:gap-[.7vw] xl:gap-8 2xl:gap-16">
+        mr-auto hidden gap-8
+        xs:flex lg:gap-[.7vw] xl:gap-8 2xl:gap-16">
       <Link
         on:click={() => click(false)}
         class={twMerge(className)}

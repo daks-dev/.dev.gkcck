@@ -75,11 +75,12 @@
       'border-4 border-slate-400',
       'transition duration-500',
       'sm:block',
-      'lg:absolute',
-      'lg:right-[7vw] lg:top-[3vh] lg:aspect-4/3 lg:max-w-md lg:rounded-lg',
-      'lg:border lg:drop-shadow-brand',
-      'lg:oversee:drop-shadow-md xl:right-[10vw]',
-      'xl:top-[5vh] 3xl:right-[20vw] 3xl:top-[7vh]'
+      'md:max-w-2xl',
+      'xl:absolute',
+      'xl:right-[5vw] xl:top-[5vh] xl:aspect-4/3 xl:max-w-md xl:rounded-lg',
+      'xl:border xl:drop-shadow-brand xl:oversee:drop-shadow-md',
+      '2xl:right-[10vw]',
+      '3xl:right-[18vw] 3xl:top-[8vh]'
     ]}
     {projects}
     scaled />
@@ -93,7 +94,9 @@
           order-1 h-fit w-80
           shrink-0 drop-shadow-md
           oversee:drop-shadow-sm md:order-none"
-        href="/partners">
+        href="/partners"
+        aria-label="партнёры">
+        <span class="sr-only">партнёры</span>
         <Sign
           class="left-2 top-2"
           link

@@ -5,7 +5,7 @@
   import { sineIn } from 'svelte/easing';
   import { beforeNavigate } from '$app/navigation';
   import { YandexMap, type YandexMapInstance } from '@daks.dev/svelte.sdk';
-  import twMerge from '$lib/assets/tailwindcss';
+  import twMerge from '$lib/tailwind';
 
   let className: ClassName = undefined;
   export { className as class };

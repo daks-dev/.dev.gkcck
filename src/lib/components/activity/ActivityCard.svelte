@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Icon, Sign } from '@daks.dev/svelte.sdk';
-  import twMerge from '$lib/assets/tailwindcss';
+  import twMerge from '$lib/tailwind';
 
   let className: ClassName = undefined;
   export { className as class };
@@ -16,6 +16,7 @@
   class={twMerge(
     'group relative p-7 py-4',
     'flex flex-col',
+    'text-slate-600 dark:text-slate-400',
     'rounded border border-current shadow',
     animate,
     className
@@ -28,17 +29,17 @@
   <slot name="title" />
   <div class="mb-7 mt-2 flex grow flex-col justify-center pl-4">
     <slot>
-      <div class="text-slate-500">
+      <div class="">
         Объектов реализовано:
         <span class="text-2xl text-brand">...</span>
       </div>
-      <div class="text-slate-500">
+      <div class="">
         Объекты в работе:
         <span class="text-2xl text-brand">...</span>
       </div>
     </slot>
   </div>
-  <div class="flex items-start gap-5 text-slate-500">
+  <div class="flex items-start gap-5">
     <Icon
       class="
         transition-easy drop-shadow-lg

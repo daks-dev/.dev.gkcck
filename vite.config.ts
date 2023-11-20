@@ -15,9 +15,7 @@ export default {
     fs: { strict: false }
   },
   // build: { target: 'esnext' },
-  define: {
-    'process.env': process.env
-  },
+  // define: { 'process.env': process.env },
   test: {
     // globals: true,
     environment: 'jsdom',
