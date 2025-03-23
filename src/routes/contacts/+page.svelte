@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import {
     Contacts,
+    Figure,
     LightboxList,
     LightboxThumbnail,
     LightboxModal,
@@ -12,7 +13,7 @@
 
   import type { PageData } from './$types';
   export let data: PageData;
-  const { thumbnail, sources } = data;
+  const { sources, modified } = data;
 
   import microdata from '$lib/configs/microdata';
 
@@ -61,39 +62,54 @@
     <h1 class="title">Контакты</h1>
   </header>
 
-  <div class="frame flex items-center justify-around gap-8">
+  <div class="frame flex items-center justify-between gap-8">
     <Contacts
       class="h-fit"
       {microdata} />
 
     <LightboxList
-      class="group relative max-sm:hidden md:shrink-0"
+      class="max-sm:hidden md:shrink-0"
       custom={{ overlay: 'overflow-offset' }}
       options={{ behaviour: 'loop' }}
       loader={() => document?.lazyload.update()}
       title="ССК"
       description="Группа компаний">
-      <svelte:fragment slot="thumbnail">
-        <LightboxThumbnail>
+      {#snippet thumbnail()}
+        <LightboxThumbnail class="group relative mr-2">
           <Sign
-            class="top-2 left-5"
             icon="ic:round-zoom-out-map"
+            class="top-1 left-1"
             dark />
-          <img
-            class="
-            transition-easy
-            oversee:scale-105 oversee:drop-shadow-lg
-            mx-3 rounded-md
-            drop-shadow-md transition-transform duration-300"
-            {...thumbnail}
-            alt="" />
+          <Figure
+            data={modified}
+            class={['relative', 'flex flex-col', 'items-center']}
+            custom={{
+              image: [
+                'h-auto w-full max-w-full object-contain',
+                'rounded-md',
+                'shadow-md hover:shadow-lg',
+                'hover:scale-105',
+                'transition duration-300 ease-in-out'
+              ]
+            }}
+            alt="контактная информация" />
+          {#each sources as source}
+            <link
+              rel="image"
+              href={source.src} />
+          {/each}
+          <link
+            rel="thumbnailUrl"
+            href={modified.src} />
         </LightboxThumbnail>
-      </svelte:fragment>
+      {/snippet}
       {#each sources as source}
         <LightboxModal>
           <img
             {...source}
-            alt="" />
+            alt=""
+            decoding="async"
+            loading="lazy" />
         </LightboxModal>
       {/each}
     </LightboxList>

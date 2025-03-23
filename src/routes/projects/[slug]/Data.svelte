@@ -74,6 +74,7 @@
         relative w-fit drop-shadow-md"
       href="/partners/{customer.id.toString().padStart(3, '0')}">
       <Sign
+        icon="mdi:link-variant"
         class="top-0 left-full ml-1"
         link
         small />

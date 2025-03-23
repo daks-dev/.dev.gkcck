@@ -66,7 +66,7 @@
 
     <Aside
       sources={project.images?.sources}
-      thumbnails={project.images?.screens} />
+      modifieds={project.images?.screens} />
   </div>
 
   <div

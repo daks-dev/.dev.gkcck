@@ -1,9 +1,9 @@
 import type { PageLoad } from './$types';
 
-export const load = (async () => ({
-  thumbnail: (await import('$lib/content/contacts/00.webp?w=320&meta')).default,
+export const load: PageLoad = async () => ({
   sources: [
     (await import('$lib/content/contacts/00.webp?meta')).default,
     (await import('$lib/content/contacts/01.webp?meta')).default
-  ]
-})) satisfies PageLoad;
+  ],
+  modified: (await import('$lib/content/contacts/00.webp?w=320&meta')).default
+});

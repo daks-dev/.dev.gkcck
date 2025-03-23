@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { Icon, Sign } from '@daks.dev/svelte.sdk';
-  import { twMerge } from 'tailwind-merge';
+  import { twMerge, Icon, Sign } from '@daks.dev/svelte.sdk';
 
   let className: ClassName = undefined;
   export { className as class };
@@ -23,6 +22,7 @@
   )}
   {href}>
   <Sign
+    icon="mdi:link-variant"
     class="top-1 left-1"
     link
     small />

@@ -1,19 +1,17 @@
-// import type { EntryGenerator } from './$types';
-import type { PageServerLoad } from './$types';
+import type { PageLoad } from './$types';
 
-import placeholder from '$lib/assets/images/logo.png?w=288&aspect=16:9&fit=contain&meta';
-
-type MDData = {
+type Data = {
   metadata: {
     title: string;
     description: string;
+    poster?: false | number;
   };
 };
 
 const promises = {
-  mds: import.meta.glob('$lib/content/news/**/index.md'),
+  mds: import.meta.glob('$lib/content/news/**/index.(svx|mdx|md)'),
   images: import.meta.glob('$lib/content/news/**/*.(avif|gif|heic|heif|jpeg|jpg|png|tiff|webp)', {
-    query: { w: 288, aspect: '16:9', fit: 'cover', meta: true },
+    query: { w: 288, aspect: '16:9', meta: true },
     import: 'default'
   })
 };
@@ -21,24 +19,26 @@ const promises = {
 const filter = (obj: Record<string, unknown>, dir: string | undefined) =>
   Object.keys(obj).filter((x) => x.split('/').at(-2) === dir);
 
-export const load = (async () => {
+export const load: PageLoad = async () => {
   const items = await Promise.all(
     Object.keys(promises.mds)
       .sort((x, y) => (x > y ? -1 : 1))
       .map(async (path) => {
         const slug = path.split('/').at(-2);
-
-        const {
-          metadata: { title, description }
-        } = (await promises.mds[path]()) as MDData;
-
         const images: ImageMetadata[] = [];
         for (const image of filter(promises.images, slug))
           images.push((await promises.images[image]()) as ImageMetadata);
-        if (!images.length) images[0] = placeholder;
-
-        return { slug, title, description, images };
+        const {
+          metadata: { title, description, poster = images.length ? 0 : false }
+        } = (await promises.mds[path]()) as Data;
+        return {
+          slug,
+          title,
+          description,
+          poster,
+          images
+        };
       })
   );
   return { items };
-}) satisfies PageServerLoad;
+};

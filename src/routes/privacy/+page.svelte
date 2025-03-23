@@ -2,8 +2,6 @@
   import { YandexMetrikaHit } from '@daks.dev/svelte.sdk';
   import { Toast } from '$lib/components';
 
-  import '@daks.dev/svelte.sdk/styles/content.css';
-
   const title = 'ГК ССК • Политика конфиденциальности';
   const description = 'Политика конфиденциальности персональных данных ГК ССК';
 </script>

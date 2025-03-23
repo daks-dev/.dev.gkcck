@@ -7,8 +7,11 @@
     Sign
   } from '@daks.dev/svelte.sdk';
 
-  export let sources: ImageMetainfo[] = [];
-  export let thumbnails: ImageMetainfo[] = [];
+  type Props = {
+    sources: ImageMetainfo[];
+    modifieds: ImageMetainfo[];
+  };
+  const { sources = [], modifieds = [] }: Props = $props();
 </script>
 
 <LightboxList
@@ -17,8 +20,8 @@
   custom={{ overlay: 'overflow--offset' }}
   options={{ behaviour: 'loop' }}
   loader={() => document?.lazyload.update()}>
-  <svelte:fragment slot="thumbnail">
-    {#each thumbnails as data, idx}
+  {#snippet thumbnail()}
+    {#each modifieds as data, idx}
       {#if idx < 1}
         <LightboxThumbnail class="group relative h-fit first:mt-1">
           <Sign
@@ -42,14 +45,14 @@
         href={sources[idx].src} />
       <link
         rel="thumbnailUrl"
-        href={thumbnails[idx].src} />
+        href={modifieds[idx].src} />
     {/each}
     {#if sources.length > 1}
       <span class="text-accent text-lg font-semibold whitespace-nowrap md:self-start">
         [ +{sources.length - 1} ]
       </span>
     {/if}
-  </svelte:fragment>
+  {/snippet}
   {#each sources as { src, width, height, title, subtitle, description }}
     <LightboxModal
       {title}

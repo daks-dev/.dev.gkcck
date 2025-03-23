@@ -38,7 +38,7 @@
   class="
     frame mb-4 flex
     items-center gap-4 overflow-hidden">
-  <span class="mr-auto p-1.5">[{projects.length}]</span>
+  <small class="mr-auto p-1.5">[ {projects.length} ]</small>
   <button
     on:click={() => (mode = 0)}
     class="
@@ -92,6 +92,7 @@
         class="group relative"
         href={`/projects/${id.toString().padStart(3, '0')}`}>
         <Sign
+          icon="mdi:link-variant"
           class="top-2 left-2"
           link
           dark />

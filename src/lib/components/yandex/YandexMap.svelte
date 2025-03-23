@@ -4,8 +4,7 @@
   import { fade, fly, scale } from 'svelte/transition';
   import { sineIn } from 'svelte/easing';
   import { beforeNavigate } from '$app/navigation';
-  import { YandexMap, type YandexMapInstance } from '@daks.dev/svelte.sdk';
-  import { twMerge } from 'tailwind-merge';
+  import { twMerge, YandexMap, type YandexMapInstance } from '@daks.dev/svelte.sdk';
 
   let className: ClassName = undefined;
   export { className as class };

@@ -99,6 +99,7 @@
         aria-label="партнёры">
         <span class="sr-only">партнёры</span>
         <Sign
+          icon="mdi:link-variant"
           class="top-2 left-2"
           link
           light />

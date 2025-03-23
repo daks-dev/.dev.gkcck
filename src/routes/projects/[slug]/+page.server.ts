@@ -4,7 +4,7 @@ import type { PageServerLoad } from './$types';
 
 // export const prerender = 'auto';
 
-export const load = (async ({ params }) => {
+export const load: PageServerLoad = async ({ params }) => {
   if (/^\d\d\d$/.test(params.slug)) {
     const id = Number(params.slug);
     const project = await getProject(id);
@@ -32,4 +32,4 @@ export const load = (async ({ params }) => {
     throw error(404, 'Not found [data]');
   }
   throw error(404, 'Not found');
-}) satisfies PageServerLoad;
+};

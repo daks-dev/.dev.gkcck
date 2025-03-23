@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { twMerge } from 'tailwind-merge';
+  import { twMerge } from '@daks.dev/svelte.sdk';
 
   let className: ClassName = undefined;
   export { className as class };

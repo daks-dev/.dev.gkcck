@@ -1,9 +1,8 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { beforeNavigate, afterNavigate } from '$app/navigation';
-  import { Icon, Link } from '@daks.dev/svelte.sdk';
+  import { twMerge, Icon, Link } from '@daks.dev/svelte.sdk';
   import { navigate, routeTransitionMode } from '@daks.dev/svelte.sdk/stores';
-  import { twMerge } from 'tailwind-merge';
 
   let className: ClassName = undefined;
   export { className as class };

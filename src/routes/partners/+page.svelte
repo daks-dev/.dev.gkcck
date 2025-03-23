@@ -33,6 +33,7 @@
           class="group relative"
           href={`/partners/${id.toString().padStart(3, '0')}`}>
           <Sign
+            icon="mdi:link-variant"
             class="top-2 left-2"
             link
             light />

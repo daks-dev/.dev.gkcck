@@ -2,8 +2,6 @@
   import { YandexMetrikaHit } from '@daks.dev/svelte.sdk';
   import { YandexMap } from '$lib/components';
 
-  import '@daks.dev/svelte.sdk/styles/content.css';
-
   import type { PageData } from './$types';
   export let data: PageData;
   const { projects } = data;
