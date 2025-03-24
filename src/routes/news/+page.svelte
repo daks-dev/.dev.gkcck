@@ -5,7 +5,6 @@
 </script>
 
 <script lang="ts">
-  import { onMount } from 'svelte';
   import { sineIn, sineOut } from 'svelte/easing';
   import { blur, fade } from 'svelte/transition';
   import { Figure, FormattedDate, ListMode, Sign, YandexMetrikaHit } from '@daks.dev/svelte.sdk';
@@ -23,8 +22,6 @@
 
   const title = 'ГК ССК • Новости';
   const description = 'Новости группы компаний «ССК»';
-
-  onMount(() => document?.lazyload.update());
 </script>
 
 <YandexMetrikaHit

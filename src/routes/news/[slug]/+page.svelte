@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
   import { LightboxKit, FormattedDate, YandexMetrikaHit } from '@daks.dev/svelte.sdk';
 
   import type { PageProps } from './$types';
@@ -13,8 +12,6 @@
     sources,
     modifieds
   } = data;
-
-  onMount(() => document?.lazyload.update());
 </script>
 
 <YandexMetrikaHit

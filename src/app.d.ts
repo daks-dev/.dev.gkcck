@@ -1,12 +1,17 @@
 /// <reference types="@daks.dev/svelte.sdk/types" />
 
-type ComponentType = import('svelte').ComponentType;
-
-declare module '*.(svx|svelte\.md)' {
-  const Component: ComponentType;
-  export default Component;
+declare module '*.svx' {
+  import type { SvelteComponent } from 'svelte';
+  export default class Comp extends SvelteComponent {}
   export const metadata: Record<string, unknown>;
 }
+declare module '*.svelte.md' {
+  import type { SvelteComponent } from 'svelte';
+  export default class Comp extends SvelteComponent {}
+  export const metadata: Record<string, unknown>;
+}
+
+type ComponentType = import('svelte').ComponentType;
 declare interface MdsvexLoad {
   default: ComponentType;
   metadata: Record<string, unknown>;
