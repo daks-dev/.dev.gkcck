@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { BROWSER } from 'esm-env';
+  import { browser } from '$app/environment';
   import {
     lazyload,
     Head,
@@ -14,33 +14,33 @@
   import '../app.css';
   import '$iconify';
 
-  import type { LayoutData } from './$types';
-  export let data: LayoutData;
+  import type { LayoutProps } from './$types';
+  let { children, data }: LayoutProps = $props();
 
   import { app, nav } from '$lib/configs';
 
-  BROWSER && (document.lazyload ??= lazyload());
+  browser && (document.lazyload ??= lazyload());
 </script>
 
 <Head {app} />
 
 <RouteTransition
-  class="flex grow flex-col"
   refresh={data.refresh}
-  mode="1">
-  <slot />
+  class="flex grow flex-col"
+  duration={275}
+  delay={125}
+  mode={1}>
+  {@render children?.()}
 </RouteTransition>
 
-<!-- class="max-lg:snap-end" -->
 <Footer {...nav.footer} />
 
 <NavbarKit
   let:custom
   {...nav.navbar}>
-  <!-- icon="ic:round-forward" -->
   <NavPath class={custom.button} />
 </NavbarKit>
 
-<ScreenBlock />
+<ScreenBlock class="bg-neutral-100 dark:bg-gray-800" />
 
 <YandexMetrikaInit />
