@@ -2,7 +2,7 @@ import { error } from '@sveltejs/kit';
 // import { render } from 'svelte/server';
 import type { PageLoad } from './$types';
 
-interface Data extends MDLoadData {
+interface DataLoad extends MdsvexLoad {
   metadata: {
     title: string;
     description: string;
@@ -10,7 +10,7 @@ interface Data extends MDLoadData {
 }
 
 const promises = {
-  mds: import.meta.glob('$lib/content/news/**/index.(svx|md)'),
+  mds: import.meta.glob('$lib/content/news/**/index.(svx|svelte\.md)'),
   sources: import.meta.glob('$lib/content/news/**/*.(avif|gif|heic|heif|jpeg|jpg|png|tiff|webp)', {
     query: { meta: true },
     import: 'default'
@@ -32,7 +32,7 @@ export const load: PageLoad = async ({ params }) => {
     const { slug } = params;
     const path = filter(promises.mds, slug)[0];
     if (path) {
-      const promise = promises.mds[path]() as Promise<Data>;
+      const promise = promises.mds[path]() as Promise<DataLoad>;
       const {
         metadata: { title, description },
         default: Component

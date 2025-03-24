@@ -12,19 +12,17 @@
 
   import placeholder from '$lib/assets/images/logo.png?w=288&aspect=16:9&fit=contain&meta';
 
-  // const random = (x?: unknown[]): number => (x?.length ? Math.floor(Math.random() * x.length) : -1);
-
   import type { PageProps } from './$types';
   let { data }: PageProps = $props();
   const { items } = data;
-
-  const title = 'ГК ССК • Новости';
-  const description = 'Новости группы компаний «ССК»';
 
   const transition = {
     in: { duration: 150, delay: 50, easing: sineIn },
     out: { duration: 75, easing: sineOut }
   };
+
+  const title = 'ГК ССК • Новости';
+  const description = 'Новости группы компаний «ССК»';
 
   onMount(() => document?.lazyload.update());
 </script>
