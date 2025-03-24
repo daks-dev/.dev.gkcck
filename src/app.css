@@ -73,7 +73,7 @@
 }
 
 @utility transition-easy {
-  @apply transition duration-300 ease-in-out;
+  @apply transition duration-200 ease-in-out;
 }
 
 @import '@daks.dev/svelte.sdk/tailwind/css/readable';

@@ -6,6 +6,8 @@
 
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { sineIn, sineOut } from 'svelte/easing';
+  import { blur, fade } from 'svelte/transition';
   import { Figure, FormattedDate, ListMode, Sign, YandexMetrikaHit } from '@daks.dev/svelte.sdk';
 
   import placeholder from '$lib/assets/images/logo.png?w=288&aspect=16:9&fit=contain&meta';
@@ -19,6 +21,11 @@
   const title = 'ГК ССК • Новости';
   const description = 'Новости группы компаний «ССК»';
 
+  const transition = {
+    in: { duration: 150, delay: 50, easing: sineIn },
+    out: { duration: 75, easing: sineOut }
+  };
+
   onMount(() => document?.lazyload.update());
 </script>
 
@@ -27,20 +34,22 @@
   {description} />
 
 <main itemprop="mainContentOfPage">
-  <header class="frame mb-4">
+  <header class="frame">
     <h1 class="title">Новости</h1>
   </header>
 
   {#if items.length}
     <ListMode
       bind:mode
-      class="frame mb-4"
       length={items.length}
+      class="frame mb-4"
       app
       list />
 
     {#if mode === 'app'}
       <div
+        in:blur={transition.in}
+        out:fade={transition.out}
         class={[
           'frame',
           'xs:grid-cols-2 grid grid-cols-1 md:grid-cols-3',
@@ -93,7 +102,10 @@
         {/each}
       </div>
     {:else}
-      <div class={['frame', 'flex flex-col']}>
+      <div
+        in:blur={transition.in}
+        out:fade={transition.out}
+        class={['frame', 'flex flex-col']}>
         {#each items as { slug, title, description }, idx}
           <a
             class={[
