@@ -9,7 +9,7 @@ type Data = {
 };
 
 const promises = {
-  mds: import.meta.glob('$lib/content/news/**/index.(svx|mdx|md)'),
+  mds: import.meta.glob('$lib/content/news/**/index.(svx|md)'),
   images: import.meta.glob('$lib/content/news/**/*.(avif|gif|heic|heif|jpeg|jpg|png|tiff|webp)', {
     query: { w: 288, aspect: '16:9', meta: true },
     import: 'default'
